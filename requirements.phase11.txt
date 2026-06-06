@@ -1,0 +1,20 @@
+# requirements.phase11.txt
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 11 — New dependencies
+# Install with: pip install -r requirements.phase11.txt
+#
+# These are ADDITIONS to the existing requirements.txt from Phase 10.
+# All Phase 9/10 dependencies (fastapi, openai, langgraph, etc.) remain unchanged.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# DOCX export
+python-docx>=1.1.0
+requests>=2.31.0        # already in requirements.txt — ensure it's present
+
+# Markdown → HTML conversion (used by PDFExporter)
+markdown>=3.5.0
+
+# PDF export — choose ONE (tried in order, fallbacks automatic):
+weasyprint>=61.0        # best quality: full HTML/CSS → PDF
+# fpdf2>=2.7.0          # fallback option (uncomment if weasyprint won't install)
+# reportlab>=4.0.0      # final fallback (uncomment if needed)

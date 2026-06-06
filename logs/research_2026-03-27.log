@@ -1,0 +1,249 @@
+2026-03-27 15:33:39 | INFO     | main | ==================================================
+2026-03-27 15:33:39 | INFO     | main | Agentic Research Assistant started
+2026-03-27 15:33:39 | INFO     | main | Environment : development
+2026-03-27 15:33:39 | INFO     | main | Model       : gpt-4o
+2026-03-27 15:33:39 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 15:33:39 | INFO     | main | ==================================================
+2026-03-27 15:43:52 | INFO     | main | Server shutting down.
+2026-03-27 15:44:54 | INFO     | main | ==================================================
+2026-03-27 15:44:54 | INFO     | main | Agentic Research Assistant started
+2026-03-27 15:44:54 | INFO     | main | Environment : development
+2026-03-27 15:44:54 | INFO     | main | Model       : gpt-4o
+2026-03-27 15:44:54 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 15:44:54 | INFO     | main | ==================================================
+2026-03-27 15:45:58 | INFO     | api.routes | Session started | id=835e9d37-9234-4cb3-a973-57dbfbbd82eb | query='Transformers vs Large Language Models'
+2026-03-27 15:45:59 | INFO     | app.agents.planner | PlannerAgent initialized
+2026-03-27 15:45:59 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 15:46:00 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 15:46:00 | ERROR    | api.routes | Session 835e9d37-9234-4cb3-a973-57dbfbbd82eb failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 15:47:44 | INFO     | api.routes | Session started | id=59d5e8e6-d06b-43f3-9d49-7daa36aa3062 | query='Transformers vs Large Language Models'
+2026-03-27 15:47:44 | INFO     | app.agents.planner | PlannerAgent initialized
+2026-03-27 15:47:44 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 15:47:45 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 15:47:45 | ERROR    | api.routes | Session 59d5e8e6-d06b-43f3-9d49-7daa36aa3062 failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 15:54:32 | INFO     | main | Server shutting down.
+2026-03-27 15:54:53 | INFO     | main | ==================================================
+2026-03-27 15:54:53 | INFO     | main | Agentic Research Assistant started
+2026-03-27 15:54:53 | INFO     | main | Environment : development
+2026-03-27 15:54:53 | INFO     | main | Model       : gpt-4o
+2026-03-27 15:54:53 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 15:54:53 | INFO     | main | ==================================================
+2026-03-27 15:57:24 | INFO     | api.routes | Session started | id=d400f6b8-855f-4ed5-b7e8-4afcd0169b3b | query='Transformers vs Large Language Models'
+2026-03-27 15:57:25 | INFO     | app.agents.planner | PlannerAgent initialized
+2026-03-27 15:57:25 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 15:57:26 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 15:57:26 | ERROR    | api.routes | Session d400f6b8-855f-4ed5-b7e8-4afcd0169b3b failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 15:58:11 | INFO     | api.routes | Session started | id=514e291b-413b-4510-be6c-d3056c001a66 | query='Transformers vs Large Language Models'
+2026-03-27 15:58:11 | INFO     | app.agents.planner | PlannerAgent initialized
+2026-03-27 15:58:11 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 15:58:11 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 15:58:11 | ERROR    | api.routes | Session 514e291b-413b-4510-be6c-d3056c001a66 failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 16:03:09 | INFO     | main | Server shutting down.
+2026-03-27 16:03:21 | INFO     | main | ==================================================
+2026-03-27 16:03:21 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:03:21 | INFO     | main | Environment : development
+2026-03-27 16:03:21 | INFO     | main | Model       : gpt-4o
+2026-03-27 16:03:21 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:03:21 | INFO     | main | ==================================================
+2026-03-27 16:03:55 | INFO     | api.routes | Session started | id=cb8b2ba7-e860-451d-9f40-6cec374b4d15 | query='Transformers vs Large Language Models'
+2026-03-27 16:03:56 | INFO     | app.agents.planner | PlannerAgent initialized
+2026-03-27 16:03:56 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 16:03:57 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 16:03:57 | ERROR    | api.routes | Session cb8b2ba7-e860-451d-9f40-6cec374b4d15 failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************F3cA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+2026-03-27 16:14:07 | INFO     | main | Server shutting down.
+2026-03-27 16:14:23 | INFO     | main | ==================================================
+2026-03-27 16:14:23 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:14:23 | INFO     | main | Environment : development
+2026-03-27 16:14:23 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 16:14:23 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:14:23 | INFO     | main | ==================================================
+2026-03-27 16:14:23 | INFO     | main | Server shutting down.
+2026-03-27 16:14:35 | INFO     | main | ==================================================
+2026-03-27 16:14:35 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:14:35 | INFO     | main | Environment : development
+2026-03-27 16:14:35 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 16:14:35 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:14:35 | INFO     | main | ==================================================
+2026-03-27 16:14:40 | INFO     | main | Server shutting down.
+2026-03-27 16:14:52 | INFO     | main | ==================================================
+2026-03-27 16:14:52 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:14:52 | INFO     | main | Environment : development
+2026-03-27 16:14:52 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 16:14:52 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:14:52 | INFO     | main | ==================================================
+2026-03-27 16:14:52 | INFO     | main | Server shutting down.
+2026-03-27 16:15:09 | INFO     | main | ==================================================
+2026-03-27 16:15:09 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:15:09 | INFO     | main | Environment : development
+2026-03-27 16:15:09 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 16:15:09 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:15:09 | INFO     | main | ==================================================
+2026-03-27 16:15:59 | INFO     | api.routes | Session started | id=adfb281a-2c60-41d5-8429-ba76178571f6 | query='Transformers vs Large Language Models'
+2026-03-27 16:16:00 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b-instant
+2026-03-27 16:16:00 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 16:16:00 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-27 16:16:00 | ERROR    | api.routes | Session adfb281a-2c60-41d5-8429-ba76178571f6 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-27 16:16:46 | INFO     | api.routes | Session started | id=7e2bd31d-8b3b-4441-9522-d62010708886 | query='Transformers vs Large Language Models'
+2026-03-27 16:16:46 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b-instant
+2026-03-27 16:16:46 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 16:16:46 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-27 16:16:46 | ERROR    | api.routes | Session 7e2bd31d-8b3b-4441-9522-d62010708886 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-27 16:20:31 | INFO     | main | Server shutting down.
+2026-03-27 16:20:46 | INFO     | main | ==================================================
+2026-03-27 16:20:46 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:20:46 | INFO     | main | Environment : development
+2026-03-27 16:20:46 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 16:20:46 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:20:46 | INFO     | main | ==================================================
+2026-03-27 16:20:47 | INFO     | main | Server shutting down.
+2026-03-27 16:20:59 | INFO     | main | ==================================================
+2026-03-27 16:20:59 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:20:59 | INFO     | main | Environment : development
+2026-03-27 16:20:59 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 16:20:59 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:20:59 | INFO     | main | ==================================================
+2026-03-27 16:21:22 | INFO     | api.routes | Session started | id=4902d222-f721-4100-b232-88c481d58cc1 | query='Transformers vs Large Language Models'
+2026-03-27 16:21:23 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b-instant
+2026-03-27 16:21:23 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 16:21:23 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-27 16:21:23 | ERROR    | api.routes | Session 4902d222-f721-4100-b232-88c481d58cc1 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-27 16:21:47 | INFO     | main | Server shutting down.
+2026-03-27 16:28:15 | INFO     | main | ==================================================
+2026-03-27 16:28:15 | INFO     | main | Agentic Research Assistant started
+2026-03-27 16:28:15 | INFO     | main | Environment : development
+2026-03-27 16:28:15 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 16:28:15 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 16:28:15 | INFO     | main | ==================================================
+2026-03-27 16:29:01 | INFO     | api.routes | Session started | id=8eb4d388-323a-430f-8754-8bcf8c9b86e3 | query='Transformers vs Large Language Models'
+2026-03-27 16:29:02 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b-instant
+2026-03-27 16:29:02 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 16:29:03 | INFO     | app.agents.planner | Planner generated 5 sub-questions
+2026-03-27 16:29:03 | DEBUG    | app.agents.planner |   Q1: What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models as dominant architectures in natural language processing?
+2026-03-27 16:29:03 | DEBUG    | app.agents.planner |   Q2: How do the underlying concepts of self-attention and parallelization in Transformers differ from the sequential processing and recurrent neural network architectures used in traditional Large Language Models?
+2026-03-27 16:29:03 | DEBUG    | app.agents.planner |   Q3: What are the primary differences in performance and efficiency between Transformers and Large Language Models on tasks such as language translation, text summarization, and question-answering?
+2026-03-27 16:29:03 | DEBUG    | app.agents.planner |   Q4: Can Transformers and Large Language Models be effectively combined or integrated to leverage the strengths of both architectures, and what are the potential benefits and challenges of such hybrid approaches?
+2026-03-27 16:29:03 | DEBUG    | app.agents.planner |   Q5: What are the limitations and potential risks of relying on Transformers and Large Language Models for critical applications such as content generation, decision-making, and expert systems, and how can these risks be mitigated?
+2026-03-27 17:41:35 | INFO     | main | Server shutting down.
+2026-03-27 17:42:25 | INFO     | main | ==================================================
+2026-03-27 17:42:25 | INFO     | main | Agentic Research Assistant started
+2026-03-27 17:42:25 | INFO     | main | Environment : development
+2026-03-27 17:42:25 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 17:42:25 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 17:42:25 | INFO     | main | ==================================================
+2026-03-27 17:42:25 | INFO     | main | Server shutting down.
+2026-03-27 17:43:36 | INFO     | main | ==================================================
+2026-03-27 17:43:36 | INFO     | main | Agentic Research Assistant started
+2026-03-27 17:43:36 | INFO     | main | Environment : development
+2026-03-27 17:43:36 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 17:43:36 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 17:43:36 | INFO     | main | ==================================================
+2026-03-27 17:43:36 | INFO     | main | Server shutting down.
+2026-03-27 17:43:42 | INFO     | main | ==================================================
+2026-03-27 17:43:42 | INFO     | main | Agentic Research Assistant started
+2026-03-27 17:43:42 | INFO     | main | Environment : development
+2026-03-27 17:43:42 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 17:43:42 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 17:43:42 | INFO     | main | ==================================================
+2026-03-27 17:43:42 | INFO     | main | Server shutting down.
+2026-03-27 17:43:58 | INFO     | main | ==================================================
+2026-03-27 17:43:58 | INFO     | main | Agentic Research Assistant started
+2026-03-27 17:43:58 | INFO     | main | Environment : development
+2026-03-27 17:43:58 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-27 17:43:58 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-27 17:43:58 | INFO     | main | ==================================================
+2026-03-27 17:44:26 | INFO     | api.routes | Session started | id=1bea8709-ee53-4dd5-86e8-8df46ce73210 | query='Transformers vs Large Language Models'
+2026-03-27 17:44:27 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b-instant
+2026-03-27 17:44:27 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-27 17:44:27 | INFO     | app.agents.planner | Planner generated 5 sub-questions
+2026-03-27 17:44:27 | DEBUG    | app.agents.planner |   Q1: What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?
+2026-03-27 17:44:27 | DEBUG    | app.agents.planner |   Q2: How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?
+2026-03-27 17:44:27 | DEBUG    | app.agents.planner |   Q3: What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?
+2026-03-27 17:44:27 | DEBUG    | app.agents.planner |   Q4: How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?
+2026-03-27 17:44:27 | DEBUG    | app.agents.planner |   Q5: What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?
+2026-03-27 17:44:27 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-03-27 17:44:27 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized
+2026-03-27 17:44:27 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-03-27 17:44:27 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized
+2026-03-27 17:44:27 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized
+2026-03-27 17:44:27 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGoRetriever initialized
+2026-03-27 17:44:27 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-03-27 17:44:27 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-03-27 17:44:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized with 7 sources
+2026-03-27 17:44:27 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 sub-questions in parallel
+2026-03-27 17:44:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'What are the historical milestones and key developments that led to the emergence of Transformers and Large Language Models in natural language processing (NLP)?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'How do the architectural differences between Transformers and Large Language Models impact their performance on specific NLP tasks, such as language translation and text summarization?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:27 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.pubmed_retriever | PubMed searching: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are the key similarities and differences in the training objectives and optimization techniques used for Transformers and Large Language Models, and how do these affect their ability to generalize to new tasks and domains?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'How do the applications and use cases of Transformers and Large Language Models differ in terms of their suitability for tasks such as question answering, sentiment analysis, and text classification?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are the limitations and potential risks associated with the increasing reliance on Transformers and Large Language Models in NLP, including issues related to data bias, interpretability, and explainability?'
+2026-03-27 17:44:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-27 17:44:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-27 17:44:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-27 17:44:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-27 17:44:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-27 17:44:28 | ERROR    | app.retrieval.semantic_scholar_retriever | Semantic Scholar failed: Client error '429 ' for url 'https://api.semanticscholar.org/graph/v1/paper/search?query=What+are+the+key+similarities+and+differences+in+the+training+objectives+and+optimization+techniques+used+for+Transformers+and+Large+Language+Models%2C+and+how+do+these+affect+their+ability+to+generalize+to+new+tasks+and+domains%3F&limit=5&fields=title%2Cabstract%2Cauthors%2Cyear%2Curl%2CopenAccessPdf'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-03-27 17:44:28 | ERROR    | app.retrieval.semantic_scholar_retriever | Semantic Scholar failed: Client error '429 ' for url 'https://api.semanticscholar.org/graph/v1/paper/search?query=How+do+the+applications+and+use+cases+of+Transformers+and+Large+Language+Models+differ+in+terms+of+their+suitability+for+tasks+such+as+question+answering%2C+sentiment+analysis%2C+and+text+classification%3F&limit=5&fields=title%2Cabstract%2Cauthors%2Cyear%2Curl%2CopenAccessPdf'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-03-27 17:44:28 | ERROR    | app.retrieval.semantic_scholar_retriever | Semantic Scholar failed: Client error '429 ' for url 'https://api.semanticscholar.org/graph/v1/paper/search?query=What+are+the+limitations+and+potential+risks+associated+with+the+increasing+reliance+on+Transformers+and+Large+Language+Models+in+NLP%2C+including+issues+related+to+data+bias%2C+interpretability%2C+and+explainability%3F&limit=5&fields=title%2Cabstract%2Cauthors%2Cyear%2Curl%2CopenAccessPdf'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-03-27 17:44:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 results
+2026-03-27 17:44:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 results
+2026-03-27 17:44:28 | ERROR    | app.retrieval.semantic_scholar_retriever | Semantic Scholar failed: Client error '429 ' for url 'https://api.semanticscholar.org/graph/v1/paper/search?query=What+are+the+historical+milestones+and+key+developments+that+led+to+the+emergence+of+Transformers+and+Large+Language+Models+in+natural+language+processing+%28NLP%29%3F&limit=5&fields=title%2Cabstract%2Cauthors%2Cyear%2Curl%2CopenAccessPdf'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-03-27 17:44:28 | ERROR    | app.retrieval.semantic_scholar_retriever | Semantic Scholar failed: Client error '429 ' for url 'https://api.semanticscholar.org/graph/v1/paper/search?query=How+do+the+architectural+differences+between+Transformers+and+Large+Language+Models+impact+their+performance+on+specific+NLP+tasks%2C+such+as+language+translation+and+text+summarization%3F&limit=5&fields=title%2Cabstract%2Cauthors%2Cyear%2Curl%2CopenAccessPdf'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2026-03-27 17:44:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-03-27 17:44:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-03-27 17:44:29 | ERROR    | app.retrieval.tavily_retriever | Tavily failed: Unauthorized: missing or invalid API key.
+2026-03-27 17:44:29 | ERROR    | app.retrieval.tavily_retriever | Tavily failed: Unauthorized: missing or invalid API key.
+2026-03-27 17:44:29 | ERROR    | app.retrieval.tavily_retriever | Tavily failed: Unauthorized: missing or invalid API key.
+2026-03-27 17:44:29 | ERROR    | app.retrieval.tavily_retriever | Tavily failed: Unauthorized: missing or invalid API key.
+2026-03-27 17:44:29 | ERROR    | app.retrieval.tavily_retriever | Tavily failed: Unauthorized: missing or invalid API key.
+2026-03-27 17:44:30 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 results
+2026-03-27 17:44:34 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 5 results
+2026-03-27 17:44:35 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 results
+2026-03-27 17:44:36 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 results
+2026-03-27 17:44:36 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 5 results
+2026-03-27 17:44:36 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 5 results
+2026-03-27 17:44:36 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=8 | unique=8 | returned=8
+2026-03-27 17:44:36 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=5 | unique=5 | returned=5
+2026-03-27 17:44:36 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=5 | unique=5 | returned=5
+2026-03-27 17:44:37 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 5 results
+2026-03-27 17:44:37 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=8 | unique=8 | returned=8
+2026-03-27 17:44:40 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 500 (https://export.arxiv.org/api/query?search_query=What+are+the+historical+milestones+and+key+developments+that+led+to+the+emergence+of+Transformers+and+Large+Language+Models+in+natural+language+processing+%28NLP%29%3F&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-27 17:44:40 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=1 | unique=1 | returned=1

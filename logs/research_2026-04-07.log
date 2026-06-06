@@ -1,0 +1,933 @@
+2026-04-07 11:04:31 | INFO     | main | ==================================================
+2026-04-07 11:04:31 | INFO     | main | Agentic Research Assistant started
+2026-04-07 11:04:31 | INFO     | main | Environment : development
+2026-04-07 11:04:31 | INFO     | main | Model       : llama3.1-8b
+2026-04-07 11:04:31 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-04-07 11:04:31 | INFO     | main | ==================================================
+2026-04-07 11:16:20 | INFO     | api.routes | Session started | id=84b5535e-2b09-4d05-8578-b6119f235047 | query='Transformers vs Large Language Models'
+2026-04-07 11:16:20 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama3.1-8b
+2026-04-07 11:16:20 | INFO     | app.agents.planner | Planning: 'Transformers vs Large Language Models' | questions=5
+2026-04-07 11:16:22 | INFO     | app.agents.planner | Planner finalised 5 sub-questions
+2026-04-07 11:16:22 | INFO     | app.agents.planner |   Q1: What are key differences between transformer architecture NLP models
+2026-04-07 11:16:22 | INFO     | app.agents.planner |   Q2: How do large language models compare to transformer-based models
+2026-04-07 11:16:22 | INFO     | app.agents.planner |   Q3: BERT vs GPT performance comparison on language translation tasks
+2026-04-07 11:16:22 | INFO     | app.agents.planner |   Q4: What are limitations of transformer-based models in multimodal tasks
+2026-04-07 11:16:22 | INFO     | app.agents.planner |   Q5: Can large language models surpass transformer-based models in text generation
+2026-04-07 11:16:22 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-04-07 11:16:22 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-04-07 11:16:22 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-04-07 11:16:22 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized (HTTP mode)
+2026-04-07 11:16:22 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized WITH API key
+2026-04-07 11:16:22 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-04-07 11:16:22 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-04-07 11:16:22 | INFO     | app.retrieval.image_retriever | ImageRetriever initialized | sources: beautifulsoup + wikipedia_rest + arxiv_figures | gemini_scoring=enabled
+2026-04-07 11:16:22 | INFO     | app.retrieval.hybrid_retriever | MCP loaded | tools: github + filesystem
+2026-04-07 11:16:22 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized | 6 text sources + image retriever | MCP: ON  (github + filesystem)
+2026-04-07 11:16:22 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 questions
+2026-04-07 11:16:22 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are key differences between transformer architecture NLP models'
+2026-04-07 11:16:22 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are key differences between transformer architecture NLP models'
+2026-04-07 11:16:25 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:16:25 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:16:25 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are key differences between transformer architecture NLP models'
+2026-04-07 11:16:25 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are key differences between transformer architecture NLP models'
+2026-04-07 11:16:25 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are key differences between transformer architecture NLP models'
+2026-04-07 11:16:25 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are key differences between transformer architecture NLP models'
+2026-04-07 11:16:25 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are key differences between transformer architecture NL' | short='key differences transformer architecture' | urls=5
+2026-04-07 11:16:26 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'key differences transformer architecture'
+2026-04-07 11:16:26 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:16:26 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:16:28 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 6 candidates from 5 URLs
+2026-04-07 11:16:28 | INFO     | app.retrieval.image_retriever | Stage 1 total: 8 | bs=6 wiki=2 arxiv=0
+2026-04-07 11:16:28 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:16:28 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://framerusercontent.com/images/ReUZzzWCQlGw9AZ3aBXYrA5
+2026-04-07 11:16:28 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://framerusercontent.com/images/kE6v1mSISHqjHNcQc6toxv2
+2026-04-07 11:16:28 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=6 | kept=5
+2026-04-07 11:16:29 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-07 11:16:30 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Hallucination (artificial intelligence)'
+2026-04-07 11:16:32 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Artificial intelligence'
+2026-04-07 11:16:34 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Glossary of artificial intelligence'
+2026-04-07 11:16:36 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Deep learning'
+2026-04-07 11:16:36 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 11:16:36 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are key differences between transformer architecture NLP models'
+2026-04-07 11:16:37 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'A dissemination workshop for introducing young Italian stude'
+2026-04-07 11:16:37 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Teaching NLP with Bracelets and Restaurant Menus: An Interac'
+2026-04-07 11:16:37 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:16:37 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 5
+2026-04-07 11:16:41 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'How do large language models compare to transformer-based models'
+2026-04-07 11:16:41 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do large language models compare to transformer-based models'
+2026-04-07 11:16:44 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:16:44 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:16:44 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do large language models compare to transformer-based models'
+2026-04-07 11:16:44 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do large language models compare to transformer-based models'
+2026-04-07 11:16:44 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do large language models compare to transformer-based models'
+2026-04-07 11:16:44 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'How do large language models compare to transformer-based models'
+2026-04-07 11:16:44 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='How do large language models compare to transformer-based mo' | short='large language models compare' | urls=5
+2026-04-07 11:16:44 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/@annemsony/difference-between-transformers-and-large-language-models-517306475111: 
+2026-04-07 11:16:44 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/swlh/large-language-models-transformer-architecture-the-basics-2bdd84a6db17: 
+2026-04-07 11:16:45 | INFO     | app.retrieval.image_retriever | Wikimedia | 3 images for 'large language models compare'
+2026-04-07 11:16:45 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:16:46 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:16:49 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 relevant results
+2026-04-07 11:16:49 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 0 candidates from 5 URLs
+2026-04-07 11:16:49 | INFO     | app.retrieval.image_retriever | Stage 1 total: 3 | bs=0 wiki=3 arxiv=0
+2026-04-07 11:16:49 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:16:49 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 11:16:49 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=3 | kept=3
+2026-04-07 11:16:50 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do large language models compare to transformer-based models'
+2026-04-07 11:16:51 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:16:51 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 3
+2026-04-07 11:16:55 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'BERT vs GPT performance comparison on language translation tasks'
+2026-04-07 11:16:55 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'BERT vs GPT performance comparison on language translation tasks'
+2026-04-07 11:17:03 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:17:03 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:17:03 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'BERT vs GPT performance comparison on language translation tasks'
+2026-04-07 11:17:03 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'BERT vs GPT performance comparison on language translation tasks'
+2026-04-07 11:17:03 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'BERT vs GPT performance comparison on language translation tasks'
+2026-04-07 11:17:03 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'BERT vs GPT performance comparison on language translation tasks'
+2026-04-07 11:17:03 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='BERT vs GPT performance comparison on language translation t' | short='bert gpt performance comparison' | urls=5
+2026-04-07 11:17:03 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'bert gpt performance comparison'
+2026-04-07 11:17:03 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:17:04 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:17:05 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 0 candidates from 5 URLs
+2026-04-07 11:17:05 | INFO     | app.retrieval.image_retriever | Stage 1 total: 2 | bs=0 wiki=2 arxiv=0
+2026-04-07 11:17:05 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:17:05 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 11:17:05 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=2 | kept=2
+2026-04-07 11:17:06 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Progress in artificial intelligence'
+2026-04-07 11:17:07 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Artificial intelligence engineering'
+2026-04-07 11:17:09 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Google'
+2026-04-07 11:17:11 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: '2023 in science'
+2026-04-07 11:17:11 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 11:17:11 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'BERT vs GPT performance comparison on language translation tasks'
+2026-04-07 11:17:12 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:17:12 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 2
+2026-04-07 11:17:16 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are limitations of transformer-based models in multimodal tasks'
+2026-04-07 11:17:16 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are limitations of transformer-based models in multimodal tasks'
+2026-04-07 11:17:20 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:17:20 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:17:20 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are limitations of transformer-based models in multimodal tasks'
+2026-04-07 11:17:20 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are limitations of transformer-based models in multimodal tasks'
+2026-04-07 11:17:20 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are limitations of transformer-based models in multimodal tasks'
+2026-04-07 11:17:20 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are limitations of transformer-based models in multimodal tasks'
+2026-04-07 11:17:20 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are limitations of transformer-based models in multimod' | short='limitations transformer-based models multimodal' | urls=5
+2026-04-07 11:17:21 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/@EleventhHourEnthusiast/multimodal-learning-with-transformers-a-survey-3b28b1dcaf03: 
+2026-04-07 11:17:21 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'limitations transformer-based models multimodal'
+2026-04-07 11:17:21 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 0 results
+2026-04-07 11:17:21 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:17:23 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-07 11:17:25 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'ChatGPT'
+2026-04-07 11:17:25 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 0 candidates from 5 URLs
+2026-04-07 11:17:25 | INFO     | app.retrieval.image_retriever | Stage 1 total: 2 | bs=0 wiki=2 arxiv=0
+2026-04-07 11:17:25 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:17:25 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 11:17:25 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=2 | kept=2
+2026-04-07 11:17:27 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Reinforcement learning from human feedback'
+2026-04-07 11:17:30 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Machine learning'
+2026-04-07 11:17:32 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Multimodal interaction'
+2026-04-07 11:17:32 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 11:17:32 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are limitations of transformer-based models in multimodal tasks'
+2026-04-07 11:17:33 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:17:33 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'arxiv': 3, 'tavily': 5, 'wikipedia': 1, 'github': 1} | Images: 2
+2026-04-07 11:17:37 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Can large language models surpass transformer-based models in text generation'
+2026-04-07 11:17:37 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Can large language models surpass transformer-based models in text generation'
+2026-04-07 11:17:41 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:17:41 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:17:41 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Can large language models surpass transformer-based models in text generation'
+2026-04-07 11:17:41 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Can large language models surpass transformer-based models in text generation'
+2026-04-07 11:17:41 | INFO     | app.retrieval.pubmed_retriever | PubMed searching: 'Can large language models surpass transformer-based models in text generation'
+2026-04-07 11:17:41 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Can large language models surpass transformer-based models in text generation'
+2026-04-07 11:17:41 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Can large language models surpass transformer-based models i' | short='can large language models' | urls=5
+2026-04-07 11:17:41 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/@annemsony/difference-between-transformers-and-large-language-models-517306475111: 
+2026-04-07 11:17:41 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://pchojecki.medium.com/going-beyond-llms-transformers-39f3291ba9d8: 
+2026-04-07 11:17:41 | INFO     | app.retrieval.image_retriever | Wikimedia | 3 images for 'can large language models'
+2026-04-07 11:17:41 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:17:42 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:17:43 | INFO     | app.retrieval.pubmed_retriever | PubMed returned 2 results
+2026-04-07 11:17:45 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 1 candidates from 5 URLs
+2026-04-07 11:17:45 | INFO     | app.retrieval.image_retriever | Stage 1 total: 4 | bs=1 wiki=3 arxiv=0
+2026-04-07 11:17:45 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:17:45 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 11:17:45 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 11:17:45 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 relevant results
+2026-04-07 11:17:45 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Can large language models surpass transformer-based models in text generation'
+2026-04-07 11:17:47 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:17:47 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'pubmed': 2, 'arxiv': 3, 'tavily': 2, 'semantic_scholar': 3} | Images: 4
+2026-04-07 11:17:47 | INFO     | app.retrieval.hybrid_retriever | All questions done | 48 docs | 8 images | sources: {'tavily': 22, 'arxiv': 13, 'semantic_scholar': 9, 'wikipedia': 1, 'github': 1, 'pubmed': 2}
+2026-04-07 11:17:47 | INFO     | api.routes | Retrieval done | 48 docs | 8 images
+2026-04-07 11:17:47 | INFO     | app.rag.rag_pipeline | RAGPipeline initialized | mode=embeddings | top_k=5 | min_score=0.4
+2026-04-07 11:17:47 | INFO     | app.rag.rag_pipeline | RAG | 'What are key differences between transformer architecture NL' | 10 docs → 10 chunks
+2026-04-07 11:17:47 | INFO     | app.rag.rag_pipeline | Loading embedding model (first run: ~22MB download)...
+2026-04-07 11:17:51 | INFO     | app.rag.rag_pipeline | Embedding model loaded
+2026-04-07 11:17:52 | INFO     | app.rag.rag_pipeline | RAG | kept 5/10 chunks | scores: [0.645, 0.566, 0.545, 0.515, 0.509]
+2026-04-07 11:17:52 | INFO     | app.rag.rag_pipeline | RAG | 'How do large language models compare to transformer-based mo' | 10 docs → 11 chunks
+2026-04-07 11:17:52 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.523, 0.506, 0.5, 0.467, 0.458]
+2026-04-07 11:17:52 | INFO     | app.rag.rag_pipeline | RAG | 'BERT vs GPT performance comparison on language translation t' | 10 docs → 11 chunks
+2026-04-07 11:17:53 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.625, 0.613, 0.608, 0.579, 0.54]
+2026-04-07 11:17:53 | INFO     | app.rag.rag_pipeline | RAG | 'What are limitations of transformer-based models in multimod' | 10 docs → 12 chunks
+2026-04-07 11:17:53 | INFO     | app.rag.rag_pipeline | RAG | kept 5/12 chunks | scores: [0.7, 0.577, 0.558, 0.548, 0.534]
+2026-04-07 11:17:53 | INFO     | app.rag.rag_pipeline | RAG | 'Can large language models surpass transformer-based models i' | 10 docs → 11 chunks
+2026-04-07 11:17:53 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.742, 0.585, 0.585, 0.542, 0.514]
+2026-04-07 11:17:53 | INFO     | app.rag.rag_pipeline | RAG complete | 50 raw docs → 25 filtered chunks across 5 questions
+2026-04-07 11:17:53 | INFO     | api.routes | RAG done | 48 → 25 filtered chunks
+2026-04-07 11:17:53 | INFO     | app.rag.summarizer | Summarizer initialized | model=llama3.1-8b
+2026-04-07 11:17:53 | INFO     | app.rag.summarizer | Summarizer | processing 5 questions
+2026-04-07 11:17:54 | INFO     | app.rag.summarizer | Summarizer | 'What are key differences between transformer architecture NL' | 5 chunks → 2397 chars
+2026-04-07 11:17:55 | INFO     | app.rag.summarizer | Summarizer | 'How do large language models compare to transformer-based mo' | 5 chunks → 1764 chars
+2026-04-07 11:17:56 | INFO     | app.rag.summarizer | Summarizer | 'BERT vs GPT performance comparison on language translation t' | 5 chunks → 1253 chars
+2026-04-07 11:17:57 | INFO     | app.rag.summarizer | Summarizer | 'What are limitations of transformer-based models in multimod' | 5 chunks → 2128 chars
+2026-04-07 11:17:57 | INFO     | app.rag.summarizer | Summarizer | 'Can large language models surpass transformer-based models i' | 5 chunks → 1959 chars
+2026-04-07 11:17:57 | INFO     | app.rag.summarizer | Summarizer complete | 5 summaries generated
+2026-04-07 11:17:57 | INFO     | api.routes | Summarization done | 5 summaries
+2026-04-07 11:17:57 | INFO     | app.rag.report_writer | ReportWriter initialized | model=llama3.1-8b
+2026-04-07 11:17:59 | INFO     | app.rag.report_writer | ReportWriter | generated 8950 chars | 23 sources
+2026-04-07 11:17:59 | INFO     | api.routes | Report written | 8950 chars | 23 sources
+2026-04-07 11:17:59 | INFO     | api.routes | Session 84b5535e-2b09-4d05-8578-b6119f235047 complete | 48 docs | 8 images
+2026-04-07 11:20:02 | INFO     | api.routes | Session started | id=74511c71-6940-4111-8d7e-8466b1b5f778 | query='Agentic AI systems 2025'
+2026-04-07 11:20:02 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama3.1-8b
+2026-04-07 11:20:02 | INFO     | app.agents.planner | Planning: 'Agentic AI systems 2025' | questions=5
+2026-04-07 11:20:02 | INFO     | app.agents.planner | Planner finalised 5 sub-questions
+2026-04-07 11:20:02 | INFO     | app.agents.planner |   Q1: Definition of agentic AI systems in 2025 research
+2026-04-07 11:20:02 | INFO     | app.agents.planner |   Q2: Comparison of agentic AI with traditional AI systems
+2026-04-07 11:20:02 | INFO     | app.agents.planner |   Q3: Agentic AI decision-making frameworks and algorithms
+2026-04-07 11:20:02 | INFO     | app.agents.planner |   Q4: Ethics and accountability in agentic AI systems design
+2026-04-07 11:20:02 | INFO     | app.agents.planner |   Q5: Agentic AI applications in autonomous robotics systems
+2026-04-07 11:20:02 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-04-07 11:20:02 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-04-07 11:20:02 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-04-07 11:20:02 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized (HTTP mode)
+2026-04-07 11:20:02 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized WITH API key
+2026-04-07 11:20:02 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-04-07 11:20:02 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-04-07 11:20:02 | INFO     | app.retrieval.image_retriever | ImageRetriever initialized | sources: beautifulsoup + wikipedia_rest + arxiv_figures | gemini_scoring=enabled
+2026-04-07 11:20:02 | INFO     | app.retrieval.hybrid_retriever | MCP loaded | tools: github + filesystem
+2026-04-07 11:20:02 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized | 6 text sources + image retriever | MCP: ON  (github + filesystem)
+2026-04-07 11:20:02 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 questions
+2026-04-07 11:20:02 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Definition of agentic AI systems in 2025 research'
+2026-04-07 11:20:02 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Definition of agentic AI systems in 2025 research'
+2026-04-07 11:20:05 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:20:05 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:20:05 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Definition of agentic AI systems in 2025 research'
+2026-04-07 11:20:05 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Definition of agentic AI systems in 2025 research'
+2026-04-07 11:20:05 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Definition of agentic AI systems in 2025 research'
+2026-04-07 11:20:05 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Definition of agentic AI systems in 2025 research'
+2026-04-07 11:20:05 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Definition of agentic AI systems in 2025 research' | short='definition agentic systems 2025' | urls=5
+2026-04-07 11:20:06 | INFO     | app.retrieval.image_retriever | Wikimedia | 0 images for 'definition agentic systems 2025'
+2026-04-07 11:20:06 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:20:06 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:20:08 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 4 candidates from 5 URLs
+2026-04-07 11:20:08 | INFO     | app.retrieval.image_retriever | Stage 1 total: 4 | bs=4 wiki=0 arxiv=0
+2026-04-07 11:20:08 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:20:08 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://mitsloan.mit.edu/sites/default/files/styles/multi_up
+2026-04-07 11:20:08 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://mitsloan.mit.edu/sites/default/files/styles/multi_up
+2026-04-07 11:20:08 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=2 | kept=2
+2026-04-07 11:20:10 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'History of artificial intelligence'
+2026-04-07 11:20:11 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Generative AI'
+2026-04-07 11:20:12 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Intelligent agent'
+2026-04-07 11:20:14 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Artificial general intelligence'
+2026-04-07 11:20:15 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-04-07 11:20:15 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Definition of agentic AI systems in 2025 research'
+2026-04-07 11:20:16 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:20:16 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 2
+2026-04-07 11:20:20 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Comparison of agentic AI with traditional AI systems'
+2026-04-07 11:20:20 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Comparison of agentic AI with traditional AI systems'
+2026-04-07 11:20:23 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:20:23 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:20:23 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Comparison of agentic AI with traditional AI systems'
+2026-04-07 11:20:23 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Comparison of agentic AI with traditional AI systems'
+2026-04-07 11:20:23 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Comparison of agentic AI with traditional AI systems'
+2026-04-07 11:20:23 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Comparison of agentic AI with traditional AI systems'
+2026-04-07 11:20:23 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Comparison of agentic AI with traditional AI systems' | short='comparison agentic traditional systems' | urls=5
+2026-04-07 11:20:23 | INFO     | app.retrieval.image_retriever | Wikimedia | 0 images for 'comparison agentic traditional systems'
+2026-04-07 11:20:24 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:20:24 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 2 results
+2026-04-07 11:20:25 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Generative AI'
+2026-04-07 11:20:25 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 1 candidates from 5 URLs
+2026-04-07 11:20:25 | INFO     | app.retrieval.image_retriever | Stage 1 total: 1 | bs=1 wiki=0 arxiv=0
+2026-04-07 11:20:25 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:20:25 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 11:20:25 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=1 | kept=1
+2026-04-07 11:20:26 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Artificial general intelligence'
+2026-04-07 11:20:27 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'OpenAI'
+2026-04-07 11:20:31 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Timeline of artificial intelligence'
+2026-04-07 11:20:31 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-04-07 11:20:31 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Comparison of agentic AI with traditional AI systems'
+2026-04-07 11:20:32 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'AI prediction leads people to forgo guaranteed rewards'
+2026-04-07 11:20:32 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Competing Visions of Ethical AI: A Case Study of OpenAI'
+2026-04-07 11:20:32 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:20:32 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 1
+2026-04-07 11:20:36 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Agentic AI decision-making frameworks and algorithms'
+2026-04-07 11:20:36 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Agentic AI decision-making frameworks and algorithms'
+2026-04-07 11:20:39 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:20:39 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:20:39 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Agentic AI decision-making frameworks and algorithms'
+2026-04-07 11:20:39 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Agentic AI decision-making frameworks and algorithms'
+2026-04-07 11:20:39 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Agentic AI decision-making frameworks and algorithms'
+2026-04-07 11:20:39 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Agentic AI decision-making frameworks and algorithms'
+2026-04-07 11:20:39 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Agentic AI decision-making frameworks and algorithms' | short='agentic decision-making frameworks algorithms' | urls=5
+2026-04-07 11:20:39 | INFO     | app.retrieval.image_retriever | Wikimedia | 0 images for 'agentic decision-making frameworks algorithms'
+2026-04-07 11:20:39 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:20:40 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:20:42 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Algorithmic bias'
+2026-04-07 11:20:43 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 25 candidates from 5 URLs
+2026-04-07 11:20:43 | INFO     | app.retrieval.image_retriever | Stage 1 total: 25 | bs=25 wiki=0 arxiv=0
+2026-04-07 11:20:43 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:20:43 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Agentic commerce'
+2026-04-07 11:20:44 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.prod.website-files.com/6717a0dfaf71071a80dfce8b/
+2026-04-07 11:20:44 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.prod.website-files.com/6717a0dfaf71071a80dfcec3/
+2026-04-07 11:20:44 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.prod.website-files.com/6717a0dfaf71071a80dfcec3/
+2026-04-07 11:20:44 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://dataplatr.com/assets/imgs/blog/ai.webp
+2026-04-07 11:20:45 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Intelligent agent'
+2026-04-07 11:20:45 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://dataplatr.com/blogs/1758732460_thumb.jpg
+2026-04-07 11:20:45 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://dataplatr.com/blogs/1757315496_thumb.png
+2026-04-07 11:20:45 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://dataplatr.com/blogs/1753424941_thumb.jpg
+2026-04-07 11:20:46 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-07 11:20:46 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://dataplatr.com/blogs/1752523421_thumb.jpg
+2026-04-07 11:20:47 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://dataplatr.com/blogs/1751613331_thumb.jpg
+2026-04-07 11:20:47 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://dataplatr.com/blogs/1747657002_thumb.jpg
+2026-04-07 11:20:47 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=12 | kept=5
+2026-04-07 11:20:48 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Machine ethics'
+2026-04-07 11:20:48 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 11:20:48 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Agentic AI decision-making frameworks and algorithms'
+2026-04-07 11:20:48 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Quantum decision making by social agents'
+2026-04-07 11:20:48 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Ethics-Based Auditing of Automated Decision-Making Systems: '
+2026-04-07 11:20:48 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Ethics-Based Auditing of Automated Decision-Making Systems: '
+2026-04-07 11:20:48 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Supporting Data-Frame Dynamics in AI-assisted Decision Makin'
+2026-04-07 11:20:48 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Narrowing Action Choices with AI Improves Human Sequential D'
+2026-04-07 11:20:48 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 1 relevant results
+2026-04-07 11:20:48 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 1, 'semantic_scholar': 3, 'wikipedia': 1} | Images: 5
+2026-04-07 11:20:52 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Ethics and accountability in agentic AI systems design'
+2026-04-07 11:20:52 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Ethics and accountability in agentic AI systems design'
+2026-04-07 11:20:56 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:20:56 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:20:56 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Ethics and accountability in agentic AI systems design'
+2026-04-07 11:20:56 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Ethics and accountability in agentic AI systems design'
+2026-04-07 11:20:56 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Ethics and accountability in agentic AI systems design'
+2026-04-07 11:20:56 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Ethics and accountability in agentic AI systems design'
+2026-04-07 11:20:56 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Ethics and accountability in agentic AI systems design' | short='ethics accountability agentic systems' | urls=5
+2026-04-07 11:20:56 | INFO     | app.retrieval.image_retriever | Wikimedia | 0 images for 'ethics accountability agentic systems'
+2026-04-07 11:20:56 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:20:57 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 1 results
+2026-04-07 11:20:58 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Generative AI'
+2026-04-07 11:21:00 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Machine ethics'
+2026-04-07 11:21:01 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 3 candidates from 5 URLs
+2026-04-07 11:21:01 | INFO     | app.retrieval.image_retriever | Stage 1 total: 3 | bs=3 wiki=0 arxiv=0
+2026-04-07 11:21:01 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:21:01 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.elpub.ru/assets/img/banners/base_main.jpg
+2026-04-07 11:21:01 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.elpub.ru/assets/img/banners/OpenAIRE.jpg
+2026-04-07 11:21:01 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=1 | kept=1
+2026-04-07 11:21:01 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'AI-assisted software development'
+2026-04-07 11:21:03 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-07 11:21:04 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'AI safety'
+2026-04-07 11:21:04 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 11:21:04 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Ethics and accountability in agentic AI systems design'
+2026-04-07 11:21:05 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Beyond principlism: Practical strategies for ethical AI use '
+2026-04-07 11:21:05 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Competing Visions of Ethical AI: A Case Study of OpenAI'
+2026-04-07 11:21:05 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:21:05 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 1
+2026-04-07 11:21:09 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Agentic AI applications in autonomous robotics systems'
+2026-04-07 11:21:09 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Agentic AI applications in autonomous robotics systems'
+2026-04-07 11:21:13 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 11:21:13 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 11:21:13 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Agentic AI applications in autonomous robotics systems'
+2026-04-07 11:21:13 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Agentic AI applications in autonomous robotics systems'
+2026-04-07 11:21:13 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Agentic AI applications in autonomous robotics systems'
+2026-04-07 11:21:13 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Agentic AI applications in autonomous robotics systems'
+2026-04-07 11:21:13 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Agentic AI applications in autonomous robotics systems' | short='agentic applications autonomous robotics' | urls=5
+2026-04-07 11:21:14 | INFO     | app.retrieval.image_retriever | Wikimedia | 1 images for 'agentic applications autonomous robotics'
+2026-04-07 11:21:14 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 11:21:15 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 11:21:15 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 7 candidates from 5 URLs
+2026-04-07 11:21:15 | INFO     | app.retrieval.image_retriever | Stage 1 total: 8 | bs=7 wiki=1 arxiv=0
+2026-04-07 11:21:15 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 11:21:15 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9ca0/12402697/77425a8
+2026-04-07 11:21:16 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.prod.website-files.com/68ed36e99e31581dedf5dcb1/
+2026-04-07 11:21:16 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://cdn.prod.website-files.com/68ed36e99e31581dedf5dcb1/
+2026-04-07 11:21:16 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=5 | kept=5
+2026-04-07 11:21:16 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Multi-agent system'
+2026-04-07 11:21:19 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Artificial intelligence'
+2026-04-07 11:21:20 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Autonomous robot'
+2026-04-07 11:21:22 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Robot'
+2026-04-07 11:21:22 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-04-07 11:21:22 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Agentic AI applications in autonomous robotics systems'
+2026-04-07 11:21:23 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Real-Time Deep Learning Approach to Visual Servo Control and'
+2026-04-07 11:21:23 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 11:21:23 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 5
+2026-04-07 11:21:23 | INFO     | app.retrieval.hybrid_retriever | All questions done | 49 docs | 14 images | sources: {'tavily': 25, 'arxiv': 12, 'semantic_scholar': 11, 'wikipedia': 1}
+2026-04-07 11:21:23 | INFO     | api.routes | Retrieval done | 49 docs | 14 images
+2026-04-07 11:21:23 | INFO     | app.rag.rag_pipeline | RAGPipeline initialized | mode=embeddings | top_k=5 | min_score=0.4
+2026-04-07 11:21:23 | INFO     | app.rag.rag_pipeline | RAG | 'Definition of agentic AI systems in 2025 research' | 10 docs → 14 chunks
+2026-04-07 11:21:24 | INFO     | app.rag.rag_pipeline | RAG | kept 5/14 chunks | scores: [0.789, 0.673, 0.669, 0.65, 0.629]
+2026-04-07 11:21:24 | INFO     | app.rag.rag_pipeline | RAG | 'Comparison of agentic AI with traditional AI systems' | 10 docs → 12 chunks
+2026-04-07 11:21:24 | INFO     | app.rag.rag_pipeline | RAG | kept 5/12 chunks | scores: [0.653, 0.648, 0.621, 0.597, 0.582]
+2026-04-07 11:21:24 | INFO     | app.rag.rag_pipeline | RAG | 'Agentic AI decision-making frameworks and algorithms' | 10 docs → 13 chunks
+2026-04-07 11:21:25 | INFO     | app.rag.rag_pipeline | RAG | kept 5/13 chunks | scores: [0.584, 0.487, 0.45, 0.446, 0.43]
+2026-04-07 11:21:25 | INFO     | app.rag.rag_pipeline | RAG | 'Ethics and accountability in agentic AI systems design' | 10 docs → 11 chunks
+2026-04-07 11:21:25 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.783, 0.69, 0.661, 0.621, 0.579]
+2026-04-07 11:21:25 | INFO     | app.rag.rag_pipeline | RAG | 'Agentic AI applications in autonomous robotics systems' | 10 docs → 10 chunks
+2026-04-07 11:21:25 | INFO     | app.rag.rag_pipeline | RAG | kept 3/10 chunks | scores: [0.617, 0.535, 0.441]
+2026-04-07 11:21:25 | INFO     | app.rag.rag_pipeline | RAG complete | 50 raw docs → 23 filtered chunks across 5 questions
+2026-04-07 11:21:25 | INFO     | api.routes | RAG done | 49 → 23 filtered chunks
+2026-04-07 11:21:25 | INFO     | app.rag.summarizer | Summarizer initialized | model=llama3.1-8b
+2026-04-07 11:21:25 | INFO     | app.rag.summarizer | Summarizer | processing 5 questions
+2026-04-07 11:21:32 | INFO     | app.rag.summarizer | Summarizer | 'Definition of agentic AI systems in 2025 research' | 5 chunks → 1589 chars
+2026-04-07 11:21:32 | INFO     | app.rag.summarizer | Summarizer | 'Comparison of agentic AI with traditional AI systems' | 5 chunks → 1481 chars
+2026-04-07 11:21:33 | INFO     | app.rag.summarizer | Summarizer | 'Agentic AI decision-making frameworks and algorithms' | 5 chunks → 1846 chars
+2026-04-07 11:21:34 | INFO     | app.rag.summarizer | Summarizer | 'Ethics and accountability in agentic AI systems design' | 5 chunks → 1938 chars
+2026-04-07 11:21:34 | INFO     | app.rag.summarizer | Summarizer | 'Agentic AI applications in autonomous robotics systems' | 3 chunks → 1618 chars
+2026-04-07 11:21:34 | INFO     | app.rag.summarizer | Summarizer complete | 5 summaries generated
+2026-04-07 11:21:34 | INFO     | api.routes | Summarization done | 5 summaries
+2026-04-07 11:21:34 | INFO     | app.rag.report_writer | ReportWriter initialized | model=llama3.1-8b
+2026-04-07 11:21:36 | INFO     | app.rag.report_writer | ReportWriter | generated 10329 chars | 19 sources
+2026-04-07 11:21:36 | INFO     | api.routes | Report written | 10329 chars | 19 sources
+2026-04-07 11:21:36 | INFO     | api.routes | Session 74511c71-6940-4111-8d7e-8466b1b5f778 complete | 49 docs | 14 images
+2026-04-07 14:57:04 | INFO     | api.routes | Session started | id=3edba8f7-1592-49a4-ac4d-d7fab206047e | query='Transformers vs Large Language Models'
+2026-04-07 14:57:04 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama3.1-8b
+2026-04-07 14:57:04 | INFO     | app.agents.planner | Planning: 'Transformers vs Large Language Models' | questions=5
+2026-04-07 14:57:05 | WARNING  | app.agents.planner |   Attempt 1: 1 bad question(s) — Q4
+2026-04-07 14:57:05 | INFO     | app.agents.planner |   Fixed Q4: 'How do transformer limitations impact LLM scalability' → 'What are the key challenges in transformer architecture?'
+2026-04-07 14:57:05 | INFO     | app.agents.planner | Planner finalised 5 sub-questions
+2026-04-07 14:57:05 | INFO     | app.agents.planner |   Q1: What are key differences transformer architecture LLMs
+2026-04-07 14:57:05 | INFO     | app.agents.planner |   Q2: How do transformer models compare to traditional RNNs
+2026-04-07 14:57:05 | INFO     | app.agents.planner |   Q3: What are advantages BERT GPT transformer models
+2026-04-07 14:57:05 | INFO     | app.agents.planner |   Q4: What are the key challenges in transformer architecture?
+2026-04-07 14:57:05 | INFO     | app.agents.planner |   Q5: What are applications transformer models text generation
+2026-04-07 14:57:05 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-04-07 14:57:05 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-04-07 14:57:05 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-04-07 14:57:05 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized (HTTP mode)
+2026-04-07 14:57:05 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized WITH API key
+2026-04-07 14:57:05 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-04-07 14:57:05 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-04-07 14:57:05 | INFO     | app.retrieval.image_retriever | ImageRetriever initialized | sources: beautifulsoup + wikipedia_rest + arxiv_figures | gemini_scoring=enabled
+2026-04-07 14:57:05 | INFO     | app.retrieval.hybrid_retriever | MCP loaded | tools: github + filesystem
+2026-04-07 14:57:05 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized | 6 text sources + image retriever | MCP: ON  (github + filesystem)
+2026-04-07 14:57:05 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 questions
+2026-04-07 14:57:05 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are key differences transformer architecture LLMs'
+2026-04-07 14:57:05 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are key differences transformer architecture LLMs'
+2026-04-07 14:57:09 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 14:57:09 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 14:57:09 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are key differences transformer architecture LLMs'
+2026-04-07 14:57:09 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are key differences transformer architecture LLMs'
+2026-04-07 14:57:09 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are key differences transformer architecture LLMs'
+2026-04-07 14:57:09 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are key differences transformer architecture LLMs'
+2026-04-07 14:57:09 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are key differences transformer architecture LLMs' | short='key differences transformer architecture' | urls=5
+2026-04-07 14:57:09 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/tutai-ai/transformers-and-llms-the-architecture-behind-the-ai-revolution-93ba27b4646e: 
+2026-04-07 14:57:09 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/@annemsony/difference-between-transformers-and-large-language-models-517306475111: 
+2026-04-07 14:57:09 | INFO     | app.retrieval.image_retriever | Wikimedia | 3 images for 'key differences transformer architecture'
+2026-04-07 14:57:09 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 14:57:09 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 1 results
+2026-04-07 14:57:13 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-07 14:57:14 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Llama (language model)'
+2026-04-07 14:57:15 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 3 candidates from 5 URLs
+2026-04-07 14:57:15 | INFO     | app.retrieval.image_retriever | Stage 1 total: 6 | bs=3 wiki=3 arxiv=0
+2026-04-07 14:57:15 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 14:57:15 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://developers.google.com/static/machine-learning/crash-
+2026-04-07 14:57:16 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Vision-language model'
+2026-04-07 14:57:16 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://developers.google.com/static/machine-learning/crash-
+2026-04-07 14:57:16 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 14:57:17 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Hallucination (artificial intelligence)'
+2026-04-07 14:57:18 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Mixture of experts'
+2026-04-07 14:57:18 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 14:57:18 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are key differences transformer architecture LLMs'
+2026-04-07 14:57:49 | WARNING  | app.retrieval.arxiv_retriever | ArXiv timed out — skipping
+2026-04-07 14:57:49 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'semantic_scholar': 3, 'wikipedia': 1, 'github': 1} | Images: 4
+2026-04-07 14:57:53 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'How do transformer models compare to traditional RNNs'
+2026-04-07 14:57:53 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do transformer models compare to traditional RNNs'
+2026-04-07 14:57:56 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 14:57:56 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 14:57:56 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do transformer models compare to traditional RNNs'
+2026-04-07 14:57:56 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do transformer models compare to traditional RNNs'
+2026-04-07 14:57:56 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do transformer models compare to traditional RNNs'
+2026-04-07 14:57:56 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'How do transformer models compare to traditional RNNs'
+2026-04-07 14:57:56 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='How do transformer models compare to traditional RNNs' | short='transformer models compare traditional' | urls=5
+2026-04-07 14:57:57 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'transformer models compare traditional'
+2026-04-07 14:57:57 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 14:57:57 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 14:57:59 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-07 14:58:00 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-04-07 14:58:00 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 3 candidates from 5 URLs
+2026-04-07 14:58:00 | INFO     | app.retrieval.image_retriever | Stage 1 total: 5 | bs=3 wiki=2 arxiv=0
+2026-04-07 14:58:00 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 14:58:00 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 14:58:00 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 14:58:02 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Recurrent neural network'
+2026-04-07 14:58:03 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Convolutional neural network'
+2026-04-07 14:58:04 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural network (machine learning)'
+2026-04-07 14:58:06 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Artificial intelligence'
+2026-04-07 14:58:06 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-07 14:58:06 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do transformer models compare to traditional RNNs'
+2026-04-07 14:58:36 | WARNING  | app.retrieval.arxiv_retriever | ArXiv timed out — skipping
+2026-04-07 14:58:36 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'semantic_scholar': 3, 'github': 2} | Images: 4
+2026-04-07 14:58:40 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are advantages BERT GPT transformer models'
+2026-04-07 14:58:40 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are advantages BERT GPT transformer models'
+2026-04-07 14:58:43 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 14:58:43 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 14:58:43 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are advantages BERT GPT transformer models'
+2026-04-07 14:58:43 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are advantages BERT GPT transformer models'
+2026-04-07 14:58:43 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are advantages BERT GPT transformer models'
+2026-04-07 14:58:43 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are advantages BERT GPT transformer models'
+2026-04-07 14:58:43 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are advantages BERT GPT transformer models' | short='advantages bert gpt transformer' | urls=5
+2026-04-07 14:58:43 | INFO     | app.retrieval.image_retriever | Wikimedia | 3 images for 'advantages bert gpt transformer'
+2026-04-07 14:58:43 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 14:58:43 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 14:58:45 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-04-07 14:58:45 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 4 candidates from 5 URLs
+2026-04-07 14:58:45 | INFO     | app.retrieval.image_retriever | Stage 1 total: 7 | bs=4 wiki=3 arxiv=0
+2026-04-07 14:58:45 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 14:58:45 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 14:58:45 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=6 | kept=5
+2026-04-07 14:58:46 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Gemini (language model)'
+2026-04-07 14:58:47 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Prompt engineering'
+2026-04-07 14:58:48 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural machine translation'
+2026-04-07 14:58:50 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural network (machine learning)'
+2026-04-07 14:58:51 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Google DeepMind'
+2026-04-07 14:58:51 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-07 14:58:53 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are advantages BERT GPT transformer models'
+2026-04-07 14:59:04 | WARNING  | app.retrieval.arxiv_retriever | ArXiv rate limited — skipping this query
+2026-04-07 14:59:04 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'semantic_scholar': 3, 'github': 2} | Images: 5
+2026-04-07 14:59:08 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are the key challenges in transformer architecture?'
+2026-04-07 14:59:08 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the key challenges in transformer architecture?'
+2026-04-07 14:59:11 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 14:59:11 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 14:59:11 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the key challenges in transformer architecture?'
+2026-04-07 14:59:11 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the key challenges in transformer architecture?'
+2026-04-07 14:59:11 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are the key challenges in transformer architecture?'
+2026-04-07 14:59:11 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are the key challenges in transformer architecture?'
+2026-04-07 14:59:11 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are the key challenges in transformer architecture?' | short='key challenges transformer architecture?' | urls=5
+2026-04-07 14:59:11 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/@imabhi1216/training-transformer-models-fundamentals-and-memory-challenges-61679948379a: 
+2026-04-07 14:59:12 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'key challenges transformer architecture?'
+2026-04-07 14:59:12 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 2 results
+2026-04-07 14:59:12 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 0 results
+2026-04-07 14:59:13 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'List of The Transformers characters'
+2026-04-07 14:59:15 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-07 14:59:15 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 4 candidates from 5 URLs
+2026-04-07 14:59:15 | INFO     | app.retrieval.image_retriever | Stage 1 total: 6 | bs=4 wiki=2 arxiv=0
+2026-04-07 14:59:15 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 14:59:15 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://www.artiba.org/Content/Images/how-transformer-models
+2026-04-07 14:59:15 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://www.artiba.org/Content/Images/6-essential-steps-of-t
+2026-04-07 14:59:15 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://www.artiba.org/Content/Images/7-essential-steps-of-t
+2026-04-07 14:59:15 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=3 | kept=3
+2026-04-07 14:59:18 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'List of large language models'
+2026-04-07 14:59:19 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Artificial intelligence engineering'
+2026-04-07 14:59:19 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-04-07 14:59:20 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the key challenges in transformer architecture?'
+2026-04-07 14:59:36 | WARNING  | app.retrieval.arxiv_retriever | ArXiv rate limited — skipping this query
+2026-04-07 14:59:36 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'wikipedia': 2, 'tavily': 5, 'github': 3} | Images: 3
+2026-04-07 14:59:40 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are applications transformer models text generation'
+2026-04-07 14:59:40 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are applications transformer models text generation'
+2026-04-07 14:59:43 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 14:59:43 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 14:59:43 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are applications transformer models text generation'
+2026-04-07 14:59:43 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are applications transformer models text generation'
+2026-04-07 14:59:43 | INFO     | app.retrieval.pubmed_retriever | PubMed searching: 'What are applications transformer models text generation'
+2026-04-07 14:59:43 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are applications transformer models text generation'
+2026-04-07 14:59:43 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are applications transformer models text generation' | short='applications transformer models text' | urls=5
+2026-04-07 14:59:43 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://medium.com/@aditib259/transformers-explained-how-nlp-models-understand-text-98c3538bed4a: 
+2026-04-07 14:59:43 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'applications transformer models text'
+2026-04-07 14:59:44 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 2 results
+2026-04-07 14:59:44 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 14:59:45 | INFO     | app.retrieval.pubmed_retriever | PubMed returned 2 results
+2026-04-07 14:59:46 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 1 candidates from 5 URLs
+2026-04-07 14:59:46 | INFO     | app.retrieval.image_retriever | Stage 1 total: 3 | bs=1 wiki=2 arxiv=0
+2026-04-07 14:59:46 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 14:59:46 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 14:59:46 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=3 | kept=3
+2026-04-07 14:59:47 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 relevant results
+2026-04-07 14:59:50 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are applications transformer models text generation'
+2026-04-07 15:00:04 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:00:04 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'pubmed': 2, 'arxiv': 3} | Images: 3
+2026-04-07 15:00:04 | INFO     | app.retrieval.hybrid_retriever | All questions done | 50 docs | 10 images | sources: {'tavily': 25, 'semantic_scholar': 9, 'wikipedia': 3, 'github': 8, 'pubmed': 2, 'arxiv': 3}
+2026-04-07 15:00:04 | INFO     | api.routes | Retrieval done | 50 docs | 10 images
+2026-04-07 15:00:04 | INFO     | app.rag.rag_pipeline | RAGPipeline initialized | mode=embeddings | top_k=5 | min_score=0.4
+2026-04-07 15:00:04 | INFO     | app.rag.rag_pipeline | RAG | 'What are key differences transformer architecture LLMs' | 10 docs → 12 chunks
+2026-04-07 15:00:04 | INFO     | app.rag.rag_pipeline | RAG | kept 3/12 chunks | scores: [0.427, 0.403, 0.401]
+2026-04-07 15:00:04 | INFO     | app.rag.rag_pipeline | RAG | 'How do transformer models compare to traditional RNNs' | 10 docs → 14 chunks
+2026-04-07 15:00:05 | INFO     | app.rag.rag_pipeline | RAG | kept 5/14 chunks | scores: [0.684, 0.664, 0.664, 0.599, 0.599]
+2026-04-07 15:00:05 | INFO     | app.rag.rag_pipeline | RAG | 'What are advantages BERT GPT transformer models' | 10 docs → 12 chunks
+2026-04-07 15:00:05 | INFO     | app.rag.rag_pipeline | RAG | kept 5/12 chunks | scores: [0.656, 0.467, 0.423, 0.42, 0.417]
+2026-04-07 15:00:05 | INFO     | app.rag.rag_pipeline | RAG | 'What are the key challenges in transformer architecture?' | 10 docs → 13 chunks
+2026-04-07 15:00:06 | INFO     | app.rag.rag_pipeline | RAG | kept 3/13 chunks | scores: [0.524, 0.445, 0.413]
+2026-04-07 15:00:06 | INFO     | app.rag.rag_pipeline | RAG | 'What are applications transformer models text generation' | 10 docs → 10 chunks
+2026-04-07 15:00:06 | INFO     | app.rag.rag_pipeline | RAG | kept 5/10 chunks | scores: [0.589, 0.583, 0.537, 0.52, 0.503]
+2026-04-07 15:00:06 | INFO     | app.rag.rag_pipeline | RAG complete | 50 raw docs → 21 filtered chunks across 5 questions
+2026-04-07 15:00:06 | INFO     | api.routes | RAG done | 50 → 21 filtered chunks
+2026-04-07 15:00:06 | INFO     | app.rag.summarizer | Summarizer initialized | model=llama3.1-8b
+2026-04-07 15:00:06 | INFO     | app.rag.summarizer | Summarizer | processing 5 questions
+2026-04-07 15:00:07 | INFO     | app.rag.summarizer | Summarizer | 'What are key differences transformer architecture LLMs' | 3 chunks → 1347 chars
+2026-04-07 15:00:07 | INFO     | app.rag.summarizer | Summarizer | 'How do transformer models compare to traditional RNNs' | 5 chunks → 1080 chars
+2026-04-07 15:00:08 | INFO     | app.rag.summarizer | Summarizer | 'What are advantages BERT GPT transformer models' | 5 chunks → 1613 chars
+2026-04-07 15:00:09 | INFO     | app.rag.summarizer | Summarizer | 'What are the key challenges in transformer architecture?' | 3 chunks → 1496 chars
+2026-04-07 15:00:09 | INFO     | app.rag.summarizer | Summarizer | 'What are applications transformer models text generation' | 5 chunks → 2099 chars
+2026-04-07 15:00:09 | INFO     | app.rag.summarizer | Summarizer complete | 5 summaries generated
+2026-04-07 15:00:09 | INFO     | api.routes | Summarization done | 5 summaries
+2026-04-07 15:00:09 | INFO     | app.rag.report_writer | ReportWriter initialized | model=llama3.1-8b
+2026-04-07 15:00:10 | INFO     | app.rag.report_writer | ReportWriter | generated 8565 chars | 18 sources
+2026-04-07 15:00:10 | INFO     | api.routes | Report written | 8565 chars | 18 sources
+2026-04-07 15:00:10 | INFO     | api.routes | Session 3edba8f7-1592-49a4-ac4d-d7fab206047e complete | 50 docs | 10 images
+2026-04-07 15:02:29 | INFO     | api.routes | Session started | id=489db7f6-d85a-4ebf-b074-5a41f652de32 | query='transformers vs traditional image segmentation techniques'
+2026-04-07 15:02:29 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama3.1-8b
+2026-04-07 15:02:29 | INFO     | app.agents.planner | Planning: 'transformers vs traditional image segmentation techniques' | questions=5
+2026-04-07 15:02:29 | INFO     | app.agents.planner | Planner finalised 5 sub-questions
+2026-04-07 15:02:29 | INFO     | app.agents.planner |   Q1: Comparison transformer models U-Net image segmentation accuracy
+2026-04-07 15:02:29 | INFO     | app.agents.planner |   Q2: How transformers differ from CNNs image segmentation tasks
+2026-04-07 15:02:29 | INFO     | app.agents.planner |   Q3: Transformer vs FCN performance image segmentation benchmarks
+2026-04-07 15:02:29 | INFO     | app.agents.planner |   Q4: Limitations transformer models image segmentation real-world applications
+2026-04-07 15:02:29 | INFO     | app.agents.planner |   Q5: Advantages transformer architecture image segmentation computational efficiency
+2026-04-07 15:02:29 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-04-07 15:02:29 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-04-07 15:02:29 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-04-07 15:02:29 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized (HTTP mode)
+2026-04-07 15:02:29 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized WITH API key
+2026-04-07 15:02:29 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-04-07 15:02:29 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-04-07 15:02:29 | INFO     | app.retrieval.image_retriever | ImageRetriever initialized | sources: beautifulsoup + wikipedia_rest + arxiv_figures | gemini_scoring=enabled
+2026-04-07 15:02:29 | INFO     | app.retrieval.hybrid_retriever | MCP loaded | tools: github + filesystem
+2026-04-07 15:02:29 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized | 6 text sources + image retriever | MCP: ON  (github + filesystem)
+2026-04-07 15:02:29 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 questions
+2026-04-07 15:02:29 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Comparison transformer models U-Net image segmentation accuracy'
+2026-04-07 15:02:29 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Comparison transformer models U-Net image segmentation accuracy'
+2026-04-07 15:02:34 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:02:34 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:02:34 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Comparison transformer models U-Net image segmentation accuracy'
+2026-04-07 15:02:34 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Comparison transformer models U-Net image segmentation accuracy'
+2026-04-07 15:02:34 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Comparison transformer models U-Net image segmentation accuracy'
+2026-04-07 15:02:34 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Comparison transformer models U-Net image segmentation accuracy'
+2026-04-07 15:02:34 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Comparison transformer models U-Net image segmentation accur' | short='comparison transformer models u-net' | urls=5
+2026-04-07 15:02:34 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'comparison transformer models u-net'
+2026-04-07 15:02:35 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:02:36 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-04-07 15:02:36 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:02:38 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Attention (machine learning)'
+2026-04-07 15:02:39 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Ensemble learning'
+2026-04-07 15:02:39 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 2 candidates from 5 URLs
+2026-04-07 15:02:39 | INFO     | app.retrieval.image_retriever | Stage 1 total: 4 | bs=2 wiki=2 arxiv=0
+2026-04-07 15:02:39 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:02:39 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 15:02:39 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 15:02:40 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Optical character recognition'
+2026-04-07 15:02:42 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Medical image computing'
+2026-04-07 15:02:43 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Deep learning'
+2026-04-07 15:02:43 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-07 15:02:43 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Comparison transformer models U-Net image segmentation accuracy'
+2026-04-07 15:02:44 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:02:44 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 4
+2026-04-07 15:02:48 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'How transformers differ from CNNs image segmentation tasks'
+2026-04-07 15:02:48 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How transformers differ from CNNs image segmentation tasks'
+2026-04-07 15:02:51 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:02:51 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:02:51 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How transformers differ from CNNs image segmentation tasks'
+2026-04-07 15:02:51 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How transformers differ from CNNs image segmentation tasks'
+2026-04-07 15:02:51 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How transformers differ from CNNs image segmentation tasks'
+2026-04-07 15:02:51 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'How transformers differ from CNNs image segmentation tasks'
+2026-04-07 15:02:51 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='How transformers differ from CNNs image segmentation tasks' | short='transformers differ cnns image' | urls=5
+2026-04-07 15:02:51 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'transformers differ cnns image'
+2026-04-07 15:02:52 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:02:52 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:02:53 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 14 candidates from 5 URLs
+2026-04-07 15:02:53 | INFO     | app.retrieval.image_retriever | Stage 1 total: 16 | bs=14 wiki=2 arxiv=0
+2026-04-07 15:02:53 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:02:53 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://softmaxdata.com/blog/content/images/size/w2000/2026/
+2026-04-07 15:02:54 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://softmaxdata.com/blog/content/images/size/w100/2025/1
+2026-04-07 15:02:54 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://softmaxdata.com/blog/content/images/2026/02/Screensh
+2026-04-07 15:02:54 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://softmaxdata.com/blog/content/images/2026/02/Screensh
+2026-04-07 15:02:55 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural network (machine learning)'
+2026-04-07 15:02:55 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://softmaxdata.com/blog/content/images/size/w600/2026/0
+2026-04-07 15:02:55 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://softmaxdata.com/blog/content/images/size/w600/2026/0
+2026-04-07 15:02:55 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://softmaxdata.com/blog/content/images/size/w600/2026/0
+2026-04-07 15:02:55 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/image
+2026-04-07 15:02:56 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/image
+2026-04-07 15:02:56 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/image
+2026-04-07 15:02:56 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=3 | kept=3
+2026-04-07 15:02:57 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Juyang Weng'
+2026-04-07 15:02:58 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Generation X'
+2026-04-07 15:02:58 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-04-07 15:02:58 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How transformers differ from CNNs image segmentation tasks'
+2026-04-07 15:03:00 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:03:00 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'arxiv': 3, 'tavily': 2, 'semantic_scholar': 3, 'wikipedia': 2} | Images: 3
+2026-04-07 15:03:04 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Transformer vs FCN performance image segmentation benchmarks'
+2026-04-07 15:03:04 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Transformer vs FCN performance image segmentation benchmarks'
+2026-04-07 15:03:09 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:03:09 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:03:09 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Transformer vs FCN performance image segmentation benchmarks'
+2026-04-07 15:03:09 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Transformer vs FCN performance image segmentation benchmarks'
+2026-04-07 15:03:09 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Transformer vs FCN performance image segmentation benchmarks'
+2026-04-07 15:03:09 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Transformer vs FCN performance image segmentation benchmarks'
+2026-04-07 15:03:09 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Transformer vs FCN performance image segmentation benchmarks' | short='transformer fcn performance image' | urls=5
+2026-04-07 15:03:09 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'transformer fcn performance image'
+2026-04-07 15:03:10 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-07 15:03:10 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:03:10 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:03:23 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://livrepository.liverpool.ac.uk/3183455/1/_T_PAMI_2024__TransformerSegmentation_Survey.pdf: 
+2026-04-07 15:03:23 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 26 candidates from 5 URLs
+2026-04-07 15:03:23 | INFO     | app.retrieval.image_retriever | Stage 1 total: 28 | bs=26 wiki=2 arxiv=0
+2026-04-07 15:03:23 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:03:23 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:23 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:23 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:23 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:23 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:23 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:24 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:24 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:24 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:24 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://media.springernature.com/lw685/springer-static/image
+2026-04-07 15:03:24 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=5 | kept=5
+2026-04-07 15:03:24 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Transformer vs FCN performance image segmentation benchmarks'
+2026-04-07 15:03:25 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:03:25 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'arxiv': 3, 'semantic_scholar': 3, 'tavily': 2, 'github': 2} | Images: 5
+2026-04-07 15:03:29 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Limitations transformer models image segmentation real-world applications'
+2026-04-07 15:03:29 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Limitations transformer models image segmentation real-world applications'
+2026-04-07 15:03:33 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:03:33 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:03:33 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Limitations transformer models image segmentation real-world applications'
+2026-04-07 15:03:33 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Limitations transformer models image segmentation real-world applications'
+2026-04-07 15:03:33 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Limitations transformer models image segmentation real-world applications'
+2026-04-07 15:03:33 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Limitations transformer models image segmentation real-world applications'
+2026-04-07 15:03:33 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Limitations transformer models image segmentation real-world' | short='limitations transformer models image' | urls=5
+2026-04-07 15:03:33 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'limitations transformer models image'
+2026-04-07 15:03:34 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:03:35 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural network (machine learning)'
+2026-04-07 15:03:35 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:03:35 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 2 candidates from 5 URLs
+2026-04-07 15:03:35 | INFO     | app.retrieval.image_retriever | Stage 1 total: 4 | bs=2 wiki=2 arxiv=0
+2026-04-07 15:03:35 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:03:35 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 15:03:35 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 15:03:36 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Fuzzy clustering'
+2026-04-07 15:03:37 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Natural language processing'
+2026-04-07 15:03:39 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Deep learning'
+2026-04-07 15:03:41 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Self-driving car'
+2026-04-07 15:03:41 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 15:03:42 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Limitations transformer models image segmentation real-world applications'
+2026-04-07 15:03:43 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:03:43 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 3, 'arxiv': 3, 'semantic_scholar': 3, 'wikipedia': 1} | Images: 4
+2026-04-07 15:03:47 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Advantages transformer architecture image segmentation computational efficiency'
+2026-04-07 15:03:47 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Advantages transformer architecture image segmentation computational efficiency'
+2026-04-07 15:03:51 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:03:51 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:03:51 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Advantages transformer architecture image segmentation computational efficiency'
+2026-04-07 15:03:51 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Advantages transformer architecture image segmentation computational efficiency'
+2026-04-07 15:03:51 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Advantages transformer architecture image segmentation computational efficiency'
+2026-04-07 15:03:51 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Advantages transformer architecture image segmentation computational efficiency'
+2026-04-07 15:03:51 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Advantages transformer architecture image segmentation compu' | short='advantages transformer architecture image' | urls=5
+2026-04-07 15:03:51 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'advantages transformer architecture image'
+2026-04-07 15:03:51 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:03:53 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural network (machine learning)'
+2026-04-07 15:03:53 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:03:54 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Deep learning'
+2026-04-07 15:03:54 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 3 candidates from 5 URLs
+2026-04-07 15:03:54 | INFO     | app.retrieval.image_retriever | Stage 1 total: 5 | bs=3 wiki=2 arxiv=0
+2026-04-07 15:03:54 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:03:54 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 15:03:54 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 15:03:57 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Prompt engineering'
+2026-04-07 15:03:58 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Field-programmable gate array'
+2026-04-07 15:03:59 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Anomaly detection'
+2026-04-07 15:03:59 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 15:04:00 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Advantages transformer architecture image segmentation computational efficiency'
+2026-04-07 15:04:01 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:04:01 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 4
+2026-04-07 15:04:01 | INFO     | app.retrieval.hybrid_retriever | All questions done | 44 docs | 9 images | sources: {'tavily': 15, 'arxiv': 11, 'semantic_scholar': 13, 'wikipedia': 3, 'github': 2}
+2026-04-07 15:04:01 | INFO     | api.routes | Retrieval done | 44 docs | 9 images
+2026-04-07 15:04:01 | INFO     | app.rag.rag_pipeline | RAGPipeline initialized | mode=embeddings | top_k=5 | min_score=0.4
+2026-04-07 15:04:01 | INFO     | app.rag.rag_pipeline | RAG | 'Comparison transformer models U-Net image segmentation accur' | 10 docs → 11 chunks
+2026-04-07 15:04:01 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.679, 0.641, 0.545, 0.545, 0.509]
+2026-04-07 15:04:01 | INFO     | app.rag.rag_pipeline | RAG | 'How transformers differ from CNNs image segmentation tasks' | 10 docs → 13 chunks
+2026-04-07 15:04:02 | INFO     | app.rag.rag_pipeline | RAG | kept 5/13 chunks | scores: [0.609, 0.59, 0.581, 0.555, 0.55]
+2026-04-07 15:04:02 | INFO     | app.rag.rag_pipeline | RAG | 'Transformer vs FCN performance image segmentation benchmarks' | 10 docs → 10 chunks
+2026-04-07 15:04:02 | INFO     | app.rag.rag_pipeline | RAG | kept 5/10 chunks | scores: [0.593, 0.564, 0.557, 0.538, 0.49]
+2026-04-07 15:04:02 | INFO     | app.rag.rag_pipeline | RAG | 'Limitations transformer models image segmentation real-world' | 10 docs → 12 chunks
+2026-04-07 15:04:03 | INFO     | app.rag.rag_pipeline | RAG | kept 5/12 chunks | scores: [0.696, 0.645, 0.582, 0.573, 0.499]
+2026-04-07 15:04:03 | INFO     | app.rag.rag_pipeline | RAG | 'Advantages transformer architecture image segmentation compu' | 10 docs → 11 chunks
+2026-04-07 15:04:03 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.605, 0.553, 0.539, 0.473, 0.417]
+2026-04-07 15:04:03 | INFO     | app.rag.rag_pipeline | RAG complete | 50 raw docs → 25 filtered chunks across 5 questions
+2026-04-07 15:04:03 | INFO     | api.routes | RAG done | 44 → 25 filtered chunks
+2026-04-07 15:04:03 | INFO     | app.rag.summarizer | Summarizer initialized | model=llama3.1-8b
+2026-04-07 15:04:03 | INFO     | app.rag.summarizer | Summarizer | processing 5 questions
+2026-04-07 15:04:04 | INFO     | app.rag.summarizer | Summarizer | 'Comparison transformer models U-Net image segmentation accur' | 5 chunks → 1689 chars
+2026-04-07 15:04:04 | INFO     | app.rag.summarizer | Summarizer | 'How transformers differ from CNNs image segmentation tasks' | 5 chunks → 1309 chars
+2026-04-07 15:04:05 | INFO     | app.rag.summarizer | Summarizer | 'Transformer vs FCN performance image segmentation benchmarks' | 5 chunks → 2320 chars
+2026-04-07 15:04:06 | INFO     | app.rag.summarizer | Summarizer | 'Limitations transformer models image segmentation real-world' | 5 chunks → 1427 chars
+2026-04-07 15:04:06 | INFO     | app.rag.summarizer | Summarizer | 'Advantages transformer architecture image segmentation compu' | 5 chunks → 2127 chars
+2026-04-07 15:04:06 | INFO     | app.rag.summarizer | Summarizer complete | 5 summaries generated
+2026-04-07 15:04:06 | INFO     | api.routes | Summarization done | 5 summaries
+2026-04-07 15:04:06 | INFO     | app.rag.report_writer | ReportWriter initialized | model=llama3.1-8b
+2026-04-07 15:04:08 | INFO     | app.rag.report_writer | ReportWriter | generated 9683 chars | 22 sources
+2026-04-07 15:04:08 | INFO     | api.routes | Report written | 9683 chars | 22 sources
+2026-04-07 15:04:08 | INFO     | api.routes | Session 489db7f6-d85a-4ebf-b074-5a41f652de32 complete | 44 docs | 9 images
+2026-04-07 15:05:33 | INFO     | api.routes | Session started | id=09ae4703-62a4-4fc0-8711-2ccdea6cdac8 | query='traditional image segmentation vs transformers'
+2026-04-07 15:05:33 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama3.1-8b
+2026-04-07 15:05:33 | INFO     | app.agents.planner | Planning: 'traditional image segmentation vs transformers' | questions=5
+2026-04-07 15:05:34 | INFO     | app.agents.planner | Planner finalised 5 sub-questions
+2026-04-07 15:05:34 | INFO     | app.agents.planner |   Q1: Traditional image segmentation methods vs transformer-based approaches comparison
+2026-04-07 15:05:34 | INFO     | app.agents.planner |   Q2: Impact of transformer architecture on image segmentation accuracy metrics
+2026-04-07 15:05:34 | INFO     | app.agents.planner |   Q3: Comparison of transformer efficiency with traditional convolutional neural networks
+2026-04-07 15:05:34 | INFO     | app.agents.planner |   Q4: Effectiveness of transformer-based models for semantic image segmentation tasks
+2026-04-07 15:05:34 | INFO     | app.agents.planner |   Q5: Transformer-based image segmentation methods computational resource requirements
+2026-04-07 15:05:34 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-04-07 15:05:34 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-04-07 15:05:34 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-04-07 15:05:34 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized (HTTP mode)
+2026-04-07 15:05:34 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized WITH API key
+2026-04-07 15:05:34 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-04-07 15:05:34 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-04-07 15:05:34 | INFO     | app.retrieval.image_retriever | ImageRetriever initialized | sources: beautifulsoup + wikipedia_rest + arxiv_figures | gemini_scoring=enabled
+2026-04-07 15:05:34 | INFO     | app.retrieval.hybrid_retriever | MCP loaded | tools: github + filesystem
+2026-04-07 15:05:34 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized | 6 text sources + image retriever | MCP: ON  (github + filesystem)
+2026-04-07 15:05:34 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 questions
+2026-04-07 15:05:34 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Traditional image segmentation methods vs transformer-based approaches comparison'
+2026-04-07 15:05:34 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Traditional image segmentation methods vs transformer-based approaches comparison'
+2026-04-07 15:05:37 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:05:37 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:05:37 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Traditional image segmentation methods vs transformer-based approaches comparison'
+2026-04-07 15:05:37 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Traditional image segmentation methods vs transformer-based approaches comparison'
+2026-04-07 15:05:37 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Traditional image segmentation methods vs transformer-based approaches comparison'
+2026-04-07 15:05:37 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Traditional image segmentation methods vs transformer-based approaches comparison'
+2026-04-07 15:05:37 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Traditional image segmentation methods vs transformer-based ' | short='traditional image segmentation methods' | urls=5
+2026-04-07 15:05:38 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'traditional image segmentation methods'
+2026-04-07 15:05:38 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:05:38 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:05:39 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Image registration'
+2026-04-07 15:05:43 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Natural language processing'
+2026-04-07 15:05:44 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Deep learning'
+2026-04-07 15:05:45 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Computer data storage'
+2026-04-07 15:05:45 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-04-07 15:05:47 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://run.unl.pt/bitstream/10362/150959/1/TGEO0284_E.pdf: 
+2026-04-07 15:05:50 | DEBUG    | app.retrieval.image_retriever | BS scrape failed for https://livrepository.liverpool.ac.uk/3183455/1/_T_PAMI_2024__TransformerSegmentation_Survey.pdf: 
+2026-04-07 15:05:50 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 10 candidates from 5 URLs
+2026-04-07 15:05:50 | INFO     | app.retrieval.image_retriever | Stage 1 total: 12 | bs=10 wiki=2 arxiv=0
+2026-04-07 15:05:50 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:05:50 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/d150aa92-f8af-4bcd-bcbc-4e6
+2026-04-07 15:05:50 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/1404af32-e7d9-4474-ae6c-255
+2026-04-07 15:05:50 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/e1595cf6-efba-47a7-9a37-4fd
+2026-04-07 15:05:51 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/acb1201a-e14e-4488-94d7-8ab
+2026-04-07 15:05:51 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/5b1c291c-6d89-42db-a52b-099
+2026-04-07 15:05:51 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/0d91b3b2-0df6-49c4-b489-f2c
+2026-04-07 15:05:51 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/51629779-bcc5-44b2-a55d-1fd
+2026-04-07 15:05:51 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://images.prismic.io/encord/2781656e-0314-40d6-90e7-d2d
+2026-04-07 15:05:51 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 15:05:51 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Traditional image segmentation methods vs transformer-based approaches comparison'
+2026-04-07 15:05:52 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:05:52 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'arxiv': 3, 'semantic_scholar': 3, 'wikipedia': 2, 'tavily': 1, 'github': 1} | Images: 4
+2026-04-07 15:05:56 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Impact of transformer architecture on image segmentation accuracy metrics'
+2026-04-07 15:05:56 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Impact of transformer architecture on image segmentation accuracy metrics'
+2026-04-07 15:06:04 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:06:04 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:06:04 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Impact of transformer architecture on image segmentation accuracy metrics'
+2026-04-07 15:06:04 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Impact of transformer architecture on image segmentation accuracy metrics'
+2026-04-07 15:06:04 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Impact of transformer architecture on image segmentation accuracy metrics'
+2026-04-07 15:06:04 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Impact of transformer architecture on image segmentation accuracy metrics'
+2026-04-07 15:06:04 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Impact of transformer architecture on image segmentation acc' | short='impact transformer architecture image' | urls=5
+2026-04-07 15:06:04 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'impact transformer architecture image'
+2026-04-07 15:06:04 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:06:04 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:06:05 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Prompt engineering'
+2026-04-07 15:06:07 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural network (machine learning)'
+2026-04-07 15:06:07 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 4 candidates from 5 URLs
+2026-04-07 15:06:07 | INFO     | app.retrieval.image_retriever | Stage 1 total: 6 | bs=4 wiki=2 arxiv=0
+2026-04-07 15:06:07 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:06:07 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 15:06:07 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=5 | kept=5
+2026-04-07 15:06:08 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Self-driving car'
+2026-04-07 15:06:08 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-07 15:06:10 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Impact of transformer architecture on image segmentation accuracy metrics'
+2026-04-07 15:06:11 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:06:11 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 5
+2026-04-07 15:06:15 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Comparison of transformer efficiency with traditional convolutional neural networks'
+2026-04-07 15:06:15 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Comparison of transformer efficiency with traditional convolutional neural networks'
+2026-04-07 15:06:19 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:06:19 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:06:19 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Comparison of transformer efficiency with traditional convolutional neural networks'
+2026-04-07 15:06:19 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Comparison of transformer efficiency with traditional convolutional neural networks'
+2026-04-07 15:06:19 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Comparison of transformer efficiency with traditional convolutional neural networks'
+2026-04-07 15:06:19 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Comparison of transformer efficiency with traditional convolutional neural networks'
+2026-04-07 15:06:19 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Comparison of transformer efficiency with traditional convol' | short='comparison transformer efficiency traditional' | urls=5
+2026-04-07 15:06:19 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:06:19 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:06:19 | INFO     | app.retrieval.image_retriever | Wikimedia | 4 images for 'comparison transformer efficiency traditional'
+2026-04-07 15:06:23 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 1 candidates from 5 URLs
+2026-04-07 15:06:23 | INFO     | app.retrieval.image_retriever | Stage 1 total: 5 | bs=1 wiki=4 arxiv=0
+2026-04-07 15:06:23 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:06:23 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-07 15:06:23 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=5 | kept=5
+2026-04-07 15:06:25 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 relevant results
+2026-04-07 15:06:28 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Comparison of transformer efficiency with traditional convolutional neural networks'
+2026-04-07 15:06:29 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:06:29 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 5
+2026-04-07 15:06:33 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Effectiveness of transformer-based models for semantic image segmentation tasks'
+2026-04-07 15:06:33 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Effectiveness of transformer-based models for semantic image segmentation tasks'
+2026-04-07 15:06:42 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:06:42 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:06:42 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Effectiveness of transformer-based models for semantic image segmentation tasks'
+2026-04-07 15:06:42 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Effectiveness of transformer-based models for semantic image segmentation tasks'
+2026-04-07 15:06:42 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Effectiveness of transformer-based models for semantic image segmentation tasks'
+2026-04-07 15:06:42 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Effectiveness of transformer-based models for semantic image segmentation tasks'
+2026-04-07 15:06:42 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Effectiveness of transformer-based models for semantic image' | short='effectiveness transformer-based models semantic' | urls=5
+2026-04-07 15:06:42 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'effectiveness transformer-based models semantic'
+2026-04-07 15:06:42 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:06:42 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:06:44 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Prompt engineering'
+2026-04-07 15:06:46 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Natural language processing'
+2026-04-07 15:06:47 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Ensemble learning'
+2026-04-07 15:06:48 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Generative adversarial network'
+2026-04-07 15:06:50 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Cluster analysis'
+2026-04-07 15:06:50 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 15:07:12 | WARNING  | app.retrieval.hybrid_retriever | Image retrieval failed for 'Effectiveness of transformer-based model': 
+2026-04-07 15:07:12 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Effectiveness of transformer-based models for semantic image segmentation tasks'
+2026-04-07 15:07:13 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:07:13 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 0
+2026-04-07 15:07:17 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Transformer-based image segmentation methods computational resource requirements'
+2026-04-07 15:07:17 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Transformer-based image segmentation methods computational resource requirements'
+2026-04-07 15:07:20 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-07 15:07:20 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-07 15:07:20 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Transformer-based image segmentation methods computational resource requirements'
+2026-04-07 15:07:20 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Transformer-based image segmentation methods computational resource requirements'
+2026-04-07 15:07:20 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Transformer-based image segmentation methods computational resource requirements'
+2026-04-07 15:07:20 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Transformer-based image segmentation methods computational resource requirements'
+2026-04-07 15:07:20 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Transformer-based image segmentation methods computational r' | short='transformer-based image segmentation methods' | urls=5
+2026-04-07 15:07:21 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'transformer-based image segmentation methods'
+2026-04-07 15:07:21 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-07 15:07:21 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-07 15:07:23 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'List of datasets for machine-learning research'
+2026-04-07 15:07:24 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Magnetic-core memory'
+2026-04-07 15:07:24 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 4 candidates from 5 URLs
+2026-04-07 15:07:24 | INFO     | app.retrieval.image_retriever | Stage 1 total: 6 | bs=4 wiki=2 arxiv=0
+2026-04-07 15:07:24 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-07 15:07:24 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://mlr.cdn-apple.com/media/panoptic_segmentation_fig1d_
+2026-04-07 15:07:24 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://mlr.cdn-apple.com/media/Fig_2_arch_black_ce86567d2f.
+2026-04-07 15:07:24 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=4 | kept=4
+2026-04-07 15:07:25 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Field-programmable gate array'
+2026-04-07 15:07:28 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Memristor'
+2026-04-07 15:07:29 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'ReCAPTCHA'
+2026-04-07 15:07:29 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 relevant results
+2026-04-07 15:07:29 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Transformer-based image segmentation methods computational resource requirements'
+2026-04-07 15:07:30 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-07 15:07:30 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 2, 'arxiv': 3, 'semantic_scholar': 3, 'wikipedia': 1, 'github': 1} | Images: 4
+2026-04-07 15:07:30 | INFO     | app.retrieval.hybrid_retriever | All questions done | 45 docs | 12 images | sources: {'arxiv': 11, 'semantic_scholar': 12, 'wikipedia': 3, 'tavily': 17, 'github': 2}
+2026-04-07 15:07:30 | INFO     | api.routes | Retrieval done | 45 docs | 12 images
+2026-04-07 15:07:30 | INFO     | app.rag.rag_pipeline | RAGPipeline initialized | mode=embeddings | top_k=5 | min_score=0.4
+2026-04-07 15:07:30 | INFO     | app.rag.rag_pipeline | RAG | 'Traditional image segmentation methods vs transformer-based ' | 10 docs → 12 chunks
+2026-04-07 15:07:31 | INFO     | app.rag.rag_pipeline | RAG | kept 4/12 chunks | scores: [0.484, 0.46, 0.447, 0.425]
+2026-04-07 15:07:31 | INFO     | app.rag.rag_pipeline | RAG | 'Impact of transformer architecture on image segmentation acc' | 10 docs → 11 chunks
+2026-04-07 15:07:31 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.532, 0.521, 0.458, 0.408, 0.405]
+2026-04-07 15:07:31 | INFO     | app.rag.rag_pipeline | RAG | 'Comparison of transformer efficiency with traditional convol' | 10 docs → 11 chunks
+2026-04-07 15:07:32 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.596, 0.568, 0.489, 0.487, 0.481]
+2026-04-07 15:07:32 | INFO     | app.rag.rag_pipeline | RAG | 'Effectiveness of transformer-based models for semantic image' | 10 docs → 11 chunks
+2026-04-07 15:07:32 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.68, 0.649, 0.606, 0.559, 0.555]
+2026-04-07 15:07:32 | INFO     | app.rag.rag_pipeline | RAG | 'Transformer-based image segmentation methods computational r' | 10 docs → 12 chunks
+2026-04-07 15:07:33 | INFO     | app.rag.rag_pipeline | RAG | kept 5/12 chunks | scores: [0.571, 0.513, 0.507, 0.482, 0.452]
+2026-04-07 15:07:33 | INFO     | app.rag.rag_pipeline | RAG complete | 50 raw docs → 24 filtered chunks across 5 questions
+2026-04-07 15:07:33 | INFO     | api.routes | RAG done | 45 → 24 filtered chunks
+2026-04-07 15:07:33 | INFO     | app.rag.summarizer | Summarizer initialized | model=llama3.1-8b
+2026-04-07 15:07:33 | INFO     | app.rag.summarizer | Summarizer | processing 5 questions
+2026-04-07 15:07:33 | INFO     | app.rag.summarizer | Summarizer | 'Traditional image segmentation methods vs transformer-based ' | 4 chunks → 1399 chars
+2026-04-07 15:07:34 | INFO     | app.rag.summarizer | Summarizer | 'Impact of transformer architecture on image segmentation acc' | 5 chunks → 1825 chars
+2026-04-07 15:07:34 | INFO     | app.rag.summarizer | Summarizer | 'Comparison of transformer efficiency with traditional convol' | 5 chunks → 1434 chars
+2026-04-07 15:07:35 | INFO     | app.rag.summarizer | Summarizer | 'Effectiveness of transformer-based models for semantic image' | 5 chunks → 1907 chars
+2026-04-07 15:07:36 | INFO     | app.rag.summarizer | Summarizer | 'Transformer-based image segmentation methods computational r' | 5 chunks → 1621 chars
+2026-04-07 15:07:36 | INFO     | app.rag.summarizer | Summarizer complete | 5 summaries generated
+2026-04-07 15:07:36 | INFO     | api.routes | Summarization done | 5 summaries
+2026-04-07 15:07:36 | INFO     | app.rag.report_writer | ReportWriter initialized | model=llama3.1-8b
+2026-04-07 15:07:37 | INFO     | app.rag.report_writer | ReportWriter | generated 9461 chars | 16 sources
+2026-04-07 15:07:37 | INFO     | api.routes | Report written | 9461 chars | 16 sources
+2026-04-07 15:07:37 | INFO     | api.routes | Session 09ae4703-62a4-4fc0-8711-2ccdea6cdac8 complete | 45 docs | 12 images

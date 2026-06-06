@@ -1,0 +1,7 @@
+c=f.read() 
+f.close() 
+c=c.replace("resp.choices[0].message.content.strip()", "(resp.choices[0].message.content or '').strip()") 
+f=open('app/agents/writer_agent.py','w',encoding='utf-8') 
+f.write(c) 
+f.close() 
+print('Done!') 

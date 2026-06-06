@@ -1,0 +1,189 @@
+2026-04-20 10:44:46 | INFO     | main | ==================================================
+2026-04-20 10:44:46 | INFO     | main | Agentic Research Assistant started
+2026-04-20 10:44:46 | INFO     | main | Environment : development
+2026-04-20 10:44:46 | INFO     | main | Model       : llama3.1-8b
+2026-04-20 10:44:46 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-04-20 10:44:46 | INFO     | main | ==================================================
+2026-04-20 11:19:43 | INFO     | api.routes | Session started | id=de55cd6a-1b55-4fa1-9f4c-a38246299c6d | query='Transformers vs Large Language Models'
+2026-04-20 11:19:44 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama3.1-8b
+2026-04-20 11:19:44 | INFO     | app.agents.planner | Planning: 'Transformers vs Large Language Models' | questions=5
+2026-04-20 11:19:45 | WARNING  | app.agents.planner |   Attempt 1: 1 bad question(s) — Q5
+2026-04-20 11:19:45 | INFO     | app.agents.planner |   Fixed Q5: 'How do transformer-based LLMs scale with increasing model size and complexity?' → 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:19:45 | INFO     | app.agents.planner | Planner finalised 5 sub-questions
+2026-04-20 11:19:45 | INFO     | app.agents.planner |   Q1: What are key differences between transformer models and LLMs architecture?
+2026-04-20 11:19:45 | INFO     | app.agents.planner |   Q2: How do transformer-based LLMs compare to traditional neural networks performance?
+2026-04-20 11:19:45 | INFO     | app.agents.planner |   Q3: What are advantages of using transformer models in natural language processing tasks?
+2026-04-20 11:19:45 | INFO     | app.agents.planner |   Q4: Can transformer models handle long-range dependencies in language data effectively?
+2026-04-20 11:19:45 | INFO     | app.agents.planner |   Q5: What are the key architectural differences between transformers and LLMs?
+2026-04-20 11:19:45 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-04-20 11:19:45 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-04-20 11:19:45 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-04-20 11:19:45 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized (HTTP mode)
+2026-04-20 11:19:45 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized WITH API key
+2026-04-20 11:19:45 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-04-20 11:19:45 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-04-20 11:19:45 | INFO     | app.retrieval.image_retriever | ImageRetriever initialized | sources: beautifulsoup + wikipedia_rest + arxiv_figures | gemini_scoring=enabled
+2026-04-20 11:19:45 | INFO     | app.retrieval.hybrid_retriever | MCP loaded | tools: github + filesystem
+2026-04-20 11:19:45 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized | 6 text sources + image retriever | MCP: ON  (github + filesystem)
+2026-04-20 11:19:45 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 questions
+2026-04-20 11:19:45 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are key differences between transformer models and LLMs architecture?'
+2026-04-20 11:19:45 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are key differences between transformer models and LLMs architecture?'
+2026-04-20 11:19:48 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-20 11:19:48 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-20 11:19:48 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are key differences between transformer models and LLMs architecture?'
+2026-04-20 11:19:48 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are key differences between transformer models and LLMs architecture?'
+2026-04-20 11:19:48 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are key differences between transformer models and LLMs architecture?'
+2026-04-20 11:19:48 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are key differences between transformer models and LLMs architecture?'
+2026-04-20 11:19:48 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are key differences between transformer models and LLMs' | short='key differences transformer models' | urls=5
+2026-04-20 11:19:49 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 0 results
+2026-04-20 11:19:49 | INFO     | app.retrieval.image_retriever | Wikimedia | 3 images for 'key differences transformer models'
+2026-04-20 11:19:50 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-20 11:19:51 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-20 11:19:51 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 2 candidates from 5 URLs
+2026-04-20 11:19:51 | INFO     | app.retrieval.image_retriever | Stage 1 total: 5 | bs=2 wiki=3 arxiv=0
+2026-04-20 11:19:51 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-20 11:19:51 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-20 11:19:51 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=5 | kept=5
+2026-04-20 11:19:55 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Hallucination (artificial intelligence)'
+2026-04-20 11:19:56 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Mixture of experts'
+2026-04-20 11:19:58 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Diffusion model'
+2026-04-20 11:19:59 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-04-20 11:19:59 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are key differences between transformer models and LLMs architecture?'
+2026-04-20 11:20:01 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-20 11:20:01 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'wikipedia': 2} | Images: 5
+2026-04-20 11:20:05 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'How do transformer-based LLMs compare to traditional neural networks performance?'
+2026-04-20 11:20:05 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do transformer-based LLMs compare to traditional neural networks performance?'
+2026-04-20 11:20:07 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-20 11:20:07 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-20 11:20:07 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do transformer-based LLMs compare to traditional neural networks performance?'
+2026-04-20 11:20:07 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do transformer-based LLMs compare to traditional neural networks performance?'
+2026-04-20 11:20:08 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do transformer-based LLMs compare to traditional neural networks performance?'
+2026-04-20 11:20:08 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'How do transformer-based LLMs compare to traditional neural networks performance?'
+2026-04-20 11:20:08 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='How do transformer-based LLMs compare to traditional neural ' | short='transformer-based llms compare traditional' | urls=5
+2026-04-20 11:20:08 | INFO     | app.retrieval.image_retriever | Wikimedia | 3 images for 'transformer-based llms compare traditional'
+2026-04-20 11:20:08 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-20 11:20:09 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-20 11:20:10 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-04-20 11:20:10 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 0 candidates from 5 URLs
+2026-04-20 11:20:10 | INFO     | app.retrieval.image_retriever | Stage 1 total: 3 | bs=0 wiki=3 arxiv=0
+2026-04-20 11:20:10 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-20 11:20:10 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-20 11:20:10 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=3 | kept=3
+2026-04-20 11:20:12 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-20 11:20:14 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Generative AI'
+2026-04-20 11:20:15 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Reinforcement learning'
+2026-04-20 11:20:17 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Recommender system'
+2026-04-20 11:20:19 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Reinforcement learning from human feedback'
+2026-04-20 11:20:19 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-20 11:20:19 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do transformer-based LLMs compare to traditional neural networks performance?'
+2026-04-20 11:20:20 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-20 11:20:20 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 4, 'arxiv': 3, 'semantic_scholar': 3} | Images: 3
+2026-04-20 11:20:24 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are advantages of using transformer models in natural language processing tasks?'
+2026-04-20 11:20:24 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are advantages of using transformer models in natural language processing tasks?'
+2026-04-20 11:20:27 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-20 11:20:27 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-20 11:20:27 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are advantages of using transformer models in natural language processing tasks?'
+2026-04-20 11:20:27 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are advantages of using transformer models in natural language processing tasks?'
+2026-04-20 11:20:27 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are advantages of using transformer models in natural language processing tasks?'
+2026-04-20 11:20:27 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are advantages of using transformer models in natural language processing tasks?'
+2026-04-20 11:20:27 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are advantages of using transformer models in natural l' | short='advantages using transformer models' | urls=5
+2026-04-20 11:20:27 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'advantages using transformer models'
+2026-04-20 11:20:27 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-20 11:20:28 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-20 11:20:29 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 3 candidates from 5 URLs
+2026-04-20 11:20:29 | INFO     | app.retrieval.image_retriever | Stage 1 total: 5 | bs=3 wiki=2 arxiv=0
+2026-04-20 11:20:29 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-20 11:20:29 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-20 11:20:29 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=5 | kept=5
+2026-04-20 11:20:31 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-04-20 11:20:33 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 relevant results
+2026-04-20 11:20:33 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are advantages of using transformer models in natural language processing tasks?'
+2026-04-20 11:20:34 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-20 11:20:34 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 5
+2026-04-20 11:20:39 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'Can transformer models handle long-range dependencies in language data effectively?'
+2026-04-20 11:20:39 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Can transformer models handle long-range dependencies in language data effectively?'
+2026-04-20 11:20:41 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-20 11:20:41 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-20 11:20:41 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Can transformer models handle long-range dependencies in language data effectively?'
+2026-04-20 11:20:41 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Can transformer models handle long-range dependencies in language data effectively?'
+2026-04-20 11:20:41 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Can transformer models handle long-range dependencies in language data effectively?'
+2026-04-20 11:20:41 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Can transformer models handle long-range dependencies in language data effectively?'
+2026-04-20 11:20:41 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='Can transformer models handle long-range dependencies in lan' | short='can transformer models handle' | urls=5
+2026-04-20 11:20:42 | INFO     | app.retrieval.image_retriever | Wikimedia | 2 images for 'can transformer models handle'
+2026-04-20 11:20:42 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-20 11:20:43 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 3 results
+2026-04-20 11:20:44 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-04-20 11:20:46 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural network (machine learning)'
+2026-04-20 11:20:46 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 1 candidates from 5 URLs
+2026-04-20 11:20:46 | INFO     | app.retrieval.image_retriever | Stage 1 total: 3 | bs=1 wiki=2 arxiv=0
+2026-04-20 11:20:46 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-20 11:20:46 | INFO     | app.retrieval.image_retriever | Gemini scoring skipped — all images already have high keyword scores
+2026-04-20 11:20:46 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=3 | kept=3
+2026-04-20 11:20:47 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-20 11:20:47 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Can transformer models handle long-range dependencies in language data effectively?'
+2026-04-20 11:20:49 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Byzantine-Resilient SGD in High Dimensions on Heterogeneous '
+2026-04-20 11:20:49 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Constraints on dark energy from H II starburst galaxy appare'
+2026-04-20 11:20:49 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'TerraGen: A Unified Multi-Task Layout Generation Framework f'
+2026-04-20 11:20:49 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 3 relevant results
+2026-04-20 11:20:49 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 3, 'semantic_scholar': 2} | Images: 3
+2026-04-20 11:20:53 | INFO     | app.retrieval.hybrid_retriever | Searching all sources: 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:20:53 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:20:55 | INFO     | app.retrieval.tavily_retriever | Tavily returned 5 results
+2026-04-20 11:20:55 | INFO     | app.retrieval.hybrid_retriever | Tavily returned 5 docs | 5 URLs for image scraping
+2026-04-20 11:20:55 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:20:55 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:20:55 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:20:55 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:20:55 | INFO     | app.retrieval.image_retriever | ImageRetriever | query='What are the key architectural differences between transform' | short='key architectural differences transformers' | urls=5
+2026-04-20 11:20:56 | INFO     | app.retrieval.image_retriever | Wikimedia | 3 images for 'key architectural differences transformers'
+2026-04-20 11:20:56 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-04-20 11:20:56 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar returned 0 results
+2026-04-20 11:20:58 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-04-20 11:20:58 | INFO     | app.retrieval.image_retriever | BeautifulSoup | 3 candidates from 5 URLs
+2026-04-20 11:20:58 | INFO     | app.retrieval.image_retriever | Stage 1 total: 6 | bs=3 wiki=3 arxiv=0
+2026-04-20 11:20:58 | INFO     | app.retrieval.image_retriever | Stage 3: Gemini vision scoring up to 10 low-confidence candidates
+2026-04-20 11:20:58 | DEBUG    | app.retrieval.image_retriever | Gemini dropped (score=0.00): https://storage.ghost.io/c/d1/4e/d14e4696-e64a-4ab3-8ef2-2a1
+2026-04-20 11:20:58 | INFO     | app.retrieval.image_retriever | ImageRetriever done | after_scoring=5 | kept=5
+2026-04-20 11:21:00 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-04-20 11:21:01 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Hallucination (artificial intelligence)'
+2026-04-20 11:21:02 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Vision-language model'
+2026-04-20 11:21:04 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Neural scaling law'
+2026-04-20 11:21:06 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'AI-driven design automation'
+2026-04-20 11:21:06 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-04-20 11:21:06 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the key architectural differences between transformers and LLMs?'
+2026-04-20 11:21:07 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Evolution Patterns: Designing and Reusing Architectural Evol'
+2026-04-20 11:21:07 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Physics-Informed Machine Learning for Transformer Condition '
+2026-04-20 11:21:07 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Physics-Informed Machine Learning for Transformer Condition '
+2026-04-20 11:21:07 | DEBUG    | app.retrieval.arxiv_retriever | ArXiv filtered: 'Generative AI Models for Different Steps in Architectural De'
+2026-04-20 11:21:07 | INFO     | app.retrieval.arxiv_retriever | ArXiv returned 2 relevant results
+2026-04-20 11:21:07 | INFO     | app.retrieval.hybrid_retriever | Text: 10 docs | sources: {'tavily': 5, 'arxiv': 2, 'github': 3} | Images: 5
+2026-04-20 11:21:07 | INFO     | app.retrieval.hybrid_retriever | All questions done | 44 docs | 10 images | sources: {'tavily': 20, 'arxiv': 12, 'wikipedia': 2, 'semantic_scholar': 7, 'github': 3}
+2026-04-20 11:21:07 | INFO     | api.routes | Retrieval done | 44 docs | 10 images
+2026-04-20 11:21:07 | INFO     | app.rag.rag_pipeline | RAGPipeline initialized | mode=embeddings | top_k=5 | min_score=0.4
+2026-04-20 11:21:07 | INFO     | app.rag.rag_pipeline | RAG | 'What are key differences between transformer models and LLMs' | 10 docs → 12 chunks
+2026-04-20 11:21:07 | INFO     | app.rag.rag_pipeline | Loading embedding model (first run: ~22MB download)...
+2026-04-20 11:21:12 | INFO     | app.rag.rag_pipeline | Embedding model loaded
+2026-04-20 11:21:13 | INFO     | app.rag.rag_pipeline | RAG | kept 4/12 chunks | scores: [0.726, 0.462, 0.403, 0.402]
+2026-04-20 11:21:13 | INFO     | app.rag.rag_pipeline | RAG | 'How do transformer-based LLMs compare to traditional neural ' | 10 docs → 10 chunks
+2026-04-20 11:21:13 | INFO     | app.rag.rag_pipeline | RAG | kept 3/10 chunks | scores: [0.507, 0.451, 0.4]
+2026-04-20 11:21:13 | INFO     | app.rag.rag_pipeline | RAG | 'What are advantages of using transformer models in natural l' | 10 docs → 11 chunks
+2026-04-20 11:21:13 | INFO     | app.rag.rag_pipeline | RAG | kept 5/11 chunks | scores: [0.701, 0.675, 0.664, 0.657, 0.501]
+2026-04-20 11:21:13 | INFO     | app.rag.rag_pipeline | RAG | 'Can transformer models handle long-range dependencies in lan' | 10 docs → 12 chunks
+2026-04-20 11:21:14 | INFO     | app.rag.rag_pipeline | RAG | kept 5/12 chunks | scores: [0.608, 0.606, 0.6, 0.579, 0.504]
+2026-04-20 11:21:14 | INFO     | app.rag.rag_pipeline | RAG | 'What are the key architectural differences between transform' | 10 docs → 12 chunks
+2026-04-20 11:21:14 | INFO     | app.rag.rag_pipeline | RAG | kept 5/12 chunks | scores: [0.752, 0.55, 0.49, 0.464, 0.461]
+2026-04-20 11:21:14 | INFO     | app.rag.rag_pipeline | RAG complete | 50 raw docs → 22 filtered chunks across 5 questions
+2026-04-20 11:21:14 | INFO     | api.routes | RAG done | 44 → 22 filtered chunks
+2026-04-20 11:21:14 | INFO     | app.rag.summarizer | Summarizer initialized | model=llama3.1-8b
+2026-04-20 11:21:14 | INFO     | app.rag.summarizer | Summarizer | processing 5 questions
+2026-04-20 11:21:15 | INFO     | app.rag.summarizer | Summarizer | 'What are key differences between transformer models and LLMs' | 4 chunks → 2124 chars
+2026-04-20 11:21:15 | INFO     | app.rag.summarizer | Summarizer | 'How do transformer-based LLMs compare to traditional neural ' | 3 chunks → 1202 chars
+2026-04-20 11:21:16 | INFO     | app.rag.summarizer | Summarizer | 'What are advantages of using transformer models in natural l' | 5 chunks → 1084 chars
+2026-04-20 11:21:17 | INFO     | app.rag.summarizer | Summarizer | 'Can transformer models handle long-range dependencies in lan' | 5 chunks → 1165 chars
+2026-04-20 11:21:18 | INFO     | app.rag.summarizer | Summarizer | 'What are the key architectural differences between transform' | 5 chunks → 1993 chars
+2026-04-20 11:21:18 | INFO     | app.rag.summarizer | Summarizer complete | 5 summaries generated
+2026-04-20 11:21:18 | INFO     | api.routes | Summarization done | 5 summaries
+2026-04-20 11:21:18 | INFO     | app.rag.report_writer | ReportWriter initialized | model=llama3.1-8b
+2026-04-20 11:21:20 | INFO     | app.rag.report_writer | ReportWriter | generated 9781 chars | 15 sources
+2026-04-20 11:21:20 | INFO     | api.routes | Report written | 9781 chars | 15 sources
+2026-04-20 11:21:20 | INFO     | api.routes | Session de55cd6a-1b55-4fa1-9f4c-a38246299c6d complete | 44 docs | 10 images

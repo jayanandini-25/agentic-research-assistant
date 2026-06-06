@@ -1,0 +1,243 @@
+2026-03-28 22:37:41 | INFO     | main | ==================================================
+2026-03-28 22:37:41 | INFO     | main | Agentic Research Assistant started
+2026-03-28 22:37:41 | INFO     | main | Environment : development
+2026-03-28 22:37:41 | INFO     | main | Model       : llama-3.3-70b-versatile
+2026-03-28 22:37:41 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-28 22:37:41 | INFO     | main | ==================================================
+2026-03-28 22:38:16 | INFO     | api.routes | Session started | id=03ab7cac-7b99-477e-bd25-2261c1d2c071 | query='Transformers vs Large Language Models'
+2026-03-28 22:38:17 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b-instant
+2026-03-28 22:38:17 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-28 22:38:18 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-28 22:38:18 | ERROR    | api.routes | Session 03ab7cac-7b99-477e-bd25-2261c1d2c071 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-03-28 23:14:26 | INFO     | main | Server shutting down.
+2026-03-28 23:25:14 | INFO     | main | ==================================================
+2026-03-28 23:25:14 | INFO     | main | Agentic Research Assistant started
+2026-03-28 23:25:14 | INFO     | main | Environment : development
+2026-03-28 23:25:14 | INFO     | main | Model       : gemini-2.0-flash
+2026-03-28 23:25:14 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-28 23:25:14 | INFO     | main | ==================================================
+2026-03-28 23:25:57 | INFO     | api.routes | Session started | id=f9ae0e9d-894e-4319-ae82-80bc8df70af8 | query='Transformers vs Large Language Models'
+2026-03-28 23:25:58 | INFO     | app.agents.planner | PlannerAgent initialized | model=gemini-2.0-flash
+2026-03-28 23:25:58 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-28 23:26:00 | ERROR    | app.agents.planner | PlannerAgent failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 59.700297765s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}]
+2026-03-28 23:26:00 | ERROR    | api.routes | Session f9ae0e9d-894e-4319-ae82-80bc8df70af8 failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 59.700297765s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}]
+2026-03-28 23:28:22 | INFO     | main | Server shutting down.
+2026-03-28 23:33:59 | INFO     | main | ==================================================
+2026-03-28 23:33:59 | INFO     | main | Agentic Research Assistant started
+2026-03-28 23:33:59 | INFO     | main | Environment : development
+2026-03-28 23:33:59 | INFO     | main | Model       : llama-3.3-70b
+2026-03-28 23:33:59 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-28 23:33:59 | INFO     | main | ==================================================
+2026-03-28 23:34:26 | INFO     | api.routes | Session started | id=055838af-f956-4d69-9f15-afd86f670cc2 | query='Transformers vs Large Language Models'
+2026-03-28 23:34:26 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b
+2026-03-28 23:34:26 | INFO     | app.agents.planner | Planning query: 'Transformers vs Large Language Models' | questions=5
+2026-03-28 23:34:27 | INFO     | app.agents.planner | Planner generated 5 sub-questions
+2026-03-28 23:34:27 | DEBUG    | app.agents.planner |   Q1: What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?
+2026-03-28 23:34:27 | DEBUG    | app.agents.planner |   Q2: How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?
+2026-03-28 23:34:27 | DEBUG    | app.agents.planner |   Q3: What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?
+2026-03-28 23:34:27 | DEBUG    | app.agents.planner |   Q4: How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?
+2026-03-28 23:34:27 | DEBUG    | app.agents.planner |   Q5: What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?
+2026-03-28 23:34:27 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-03-28 23:34:27 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-03-28 23:34:27 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-03-28 23:34:27 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized
+2026-03-28 23:34:27 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized
+2026-03-28 23:34:27 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGoRetriever initialized
+2026-03-28 23:34:27 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-03-28 23:34:27 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-03-28 23:34:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized with 7 sources
+2026-03-28 23:34:27 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 sub-questions in parallel
+2026-03-28 23:34:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever starting parallel search: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:27 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'What are the historical milestones and key advancements in the development of Transformers and Large Language Models, and how have they influenced each other's evolution?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'How do the underlying architectures and algorithms of Transformers and Large Language Models differ in terms of their computational complexity, memory requirements, and parallelization capabilities?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'What are the primary applications and use cases where Transformers and Large Language Models demonstrate superior performance, and can these differences be attributed to their unique strengths and weaknesses?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'How do the pre-training and fine-tuning strategies for Transformers and Large Language Models impact their performance on downstream tasks, and what are the optimal approaches for each model type?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo searching: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:28 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'What are the limitations and potential risks associated with the widespread adoption of Transformers and Large Language Models, such as data bias, interpretability, and potential job displacement?'
+2026-03-28 23:34:28 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:34:29 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-28 23:34:29 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-28 23:34:29 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-28 23:34:29 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 3 results
+2026-03-28 23:34:29 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:34:29 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 results
+2026-03-28 23:34:29 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:34:29 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:34:29 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:34:29 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:34:29 | INFO     | app.retrieval.duckduckgo_retriever | DuckDuckGo returned 0 results
+2026-03-28 23:34:32 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:34:32 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:34:32 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:34:32 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:34:34 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 1 results
+2026-03-28 23:34:36 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-03-28 23:34:37 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 results
+2026-03-28 23:34:38 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 results
+2026-03-28 23:34:39 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 3 results
+2026-03-28 23:35:12 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=What+are+the+primary+applications+and+use+cases+where+Transformers+and+Large+Language+Models+demonstrate+superior+performance%2C+and+can+these+differences+be+attributed+to+their+unique+strengths+and+weaknesses%3F&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-28 23:35:12 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=0 | unique=0 | returned=0
+2026-03-28 23:35:24 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=What+are+the+historical+milestones+and+key+advancements+in+the+development+of+Transformers+and+Large+Language+Models%2C+and+how+have+they+influenced+each+other%27s+evolution%3F&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-28 23:35:24 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=3 | unique=3 | returned=3
+2026-03-28 23:35:27 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=How+do+the+pre-training+and+fine-tuning+strategies+for+Transformers+and+Large+Language+Models+impact+their+performance+on+downstream+tasks%2C+and+what+are+the+optimal+approaches+for+each+model+type%3F&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-28 23:35:27 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=2 | unique=2 | returned=2
+2026-03-28 23:35:43 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=What+are+the+limitations+and+potential+risks+associated+with+the+widespread+adoption+of+Transformers+and+Large+Language+Models%2C+such+as+data+bias%2C+interpretability%2C+and+potential+job+displacement%3F&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-28 23:35:43 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=1 | unique=1 | returned=1
+2026-03-28 23:36:59 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 503 (https://export.arxiv.org/api/query?search_query=How+do+the+underlying+architectures+and+algorithms+of+Transformers+and+Large+Language+Models+differ+in+terms+of+their+computational+complexity%2C+memory+requirements%2C+and+parallelization+capabilities%3F&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-28 23:36:59 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=6 | unique=6 | returned=6
+2026-03-28 23:42:21 | INFO     | main | Server shutting down.
+2026-03-28 23:42:39 | INFO     | main | ==================================================
+2026-03-28 23:42:39 | INFO     | main | Agentic Research Assistant started
+2026-03-28 23:42:39 | INFO     | main | Environment : development
+2026-03-28 23:42:39 | INFO     | main | Model       : llama-3.3-70b
+2026-03-28 23:42:39 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-28 23:42:39 | INFO     | main | ==================================================
+2026-03-28 23:45:47 | INFO     | main | Server shutting down.
+2026-03-28 23:45:59 | INFO     | main | ==================================================
+2026-03-28 23:45:59 | INFO     | main | Agentic Research Assistant started
+2026-03-28 23:45:59 | INFO     | main | Environment : development
+2026-03-28 23:45:59 | INFO     | main | Model       : llama-3.3-70b
+2026-03-28 23:45:59 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-28 23:45:59 | INFO     | main | ==================================================
+2026-03-28 23:46:51 | INFO     | main | Server shutting down.
+2026-03-28 23:47:02 | INFO     | main | ==================================================
+2026-03-28 23:47:02 | INFO     | main | Agentic Research Assistant started
+2026-03-28 23:47:02 | INFO     | main | Environment : development
+2026-03-28 23:47:02 | INFO     | main | Model       : llama-3.3-70b
+2026-03-28 23:47:02 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-28 23:47:02 | INFO     | main | ==================================================
+2026-03-28 23:48:23 | INFO     | main | Server shutting down.
+2026-03-28 23:48:37 | INFO     | main | ==================================================
+2026-03-28 23:48:37 | INFO     | main | Agentic Research Assistant started
+2026-03-28 23:48:37 | INFO     | main | Environment : development
+2026-03-28 23:48:37 | INFO     | main | Model       : llama-3.3-70b
+2026-03-28 23:48:37 | INFO     | main | Docs at     : http://localhost:8000/docs
+2026-03-28 23:48:37 | INFO     | main | ==================================================
+2026-03-28 23:49:22 | INFO     | api.routes | Session started | id=3b1eb605-26ba-4201-b035-2e85fec58628 | query='Transformers vs Large Language Models'
+2026-03-28 23:49:23 | INFO     | app.agents.planner | PlannerAgent initialized | model=llama-3.1-8b
+2026-03-28 23:49:23 | INFO     | app.agents.planner | Planning: 'Transformers vs Large Language Models' | questions=5
+2026-03-28 23:49:24 | INFO     | app.agents.planner | Planner generated 5 sub-questions
+2026-03-28 23:49:24 | INFO     | app.agents.planner |   Q1: What are key differences between transformer models and LLMs architecture
+2026-03-28 23:49:24 | INFO     | app.agents.planner |   Q2: How do transformer-based LLMs compare to traditional neural networks
+2026-03-28 23:49:24 | INFO     | app.agents.planner |   Q3: What are advantages of using transformer models in NLP applications
+2026-03-28 23:49:24 | INFO     | app.agents.planner |   Q4: Can transformer models outperform LLMs in text classification tasks
+2026-03-28 23:49:24 | INFO     | app.agents.planner |   Q5: What are limitations of using transformer-based LLMs in real-world scenarios
+2026-03-28 23:49:24 | INFO     | api.routes | Planner done | 5 sub-questions
+2026-03-28 23:49:24 | INFO     | app.retrieval.tavily_retriever | TavilyRetriever initialized | enabled=True
+2026-03-28 23:49:24 | INFO     | app.retrieval.wikipedia_retriever | WikipediaRetriever initialized
+2026-03-28 23:49:24 | INFO     | app.retrieval.arxiv_retriever | ArxivRetriever initialized
+2026-03-28 23:49:24 | INFO     | app.retrieval.semantic_scholar_retriever | SemanticScholarRetriever initialized
+2026-03-28 23:49:24 | INFO     | app.retrieval.pubmed_retriever | PubMedRetriever initialized
+2026-03-28 23:49:24 | INFO     | app.retrieval.hackernews_retriever | HackerNewsRetriever initialized
+2026-03-28 23:49:24 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever initialized with 6 sources (no DuckDuckGo)
+2026-03-28 23:49:24 | INFO     | app.retrieval.hybrid_retriever | Retrieving for 5 questions in parallel
+2026-03-28 23:49:24 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever parallel search: 'What are key differences between transformer models and LLMs architecture'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever parallel search: 'How do transformer-based LLMs compare to traditional neural networks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever parallel search: 'What are advantages of using transformer models in NLP applications'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever parallel search: 'Can transformer models outperform LLMs in text classification tasks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever parallel search: 'What are limitations of using transformer-based LLMs in real-world scenarios'
+2026-03-28 23:49:24 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are key differences between transformer models and LLMs architecture'
+2026-03-28 23:49:24 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are key differences between transformer models and LLMs architecture'
+2026-03-28 23:49:24 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are key differences between transformer models and LLMs architecture'
+2026-03-28 23:49:24 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are key differences between transformer models and LLMs architecture'
+2026-03-28 23:49:24 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are key differences between transformer models and LLMs architecture'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are key differences between transformer models and LLMs architecture'
+2026-03-28 23:49:24 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'How do transformer-based LLMs compare to traditional neural networks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'How do transformer-based LLMs compare to traditional neural networks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'How do transformer-based LLMs compare to traditional neural networks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'How do transformer-based LLMs compare to traditional neural networks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'How do transformer-based LLMs compare to traditional neural networks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'How do transformer-based LLMs compare to traditional neural networks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are advantages of using transformer models in NLP applications'
+2026-03-28 23:49:24 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are advantages of using transformer models in NLP applications'
+2026-03-28 23:49:24 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are advantages of using transformer models in NLP applications'
+2026-03-28 23:49:24 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are advantages of using transformer models in NLP applications'
+2026-03-28 23:49:24 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are advantages of using transformer models in NLP applications'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hackernews_retriever | HackerNews skipped — query not tech-related: 'What are advantages of using transformer models in NLP applications'
+2026-03-28 23:49:24 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'Can transformer models outperform LLMs in text classification tasks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'Can transformer models outperform LLMs in text classification tasks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'Can transformer models outperform LLMs in text classification tasks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'Can transformer models outperform LLMs in text classification tasks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'Can transformer models outperform LLMs in text classification tasks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'Can transformer models outperform LLMs in text classification tasks'
+2026-03-28 23:49:24 | INFO     | app.retrieval.tavily_retriever | Tavily searching: 'What are limitations of using transformer-based LLMs in real-world scenarios'
+2026-03-28 23:49:24 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia searching: 'What are limitations of using transformer-based LLMs in real-world scenarios'
+2026-03-28 23:49:24 | INFO     | app.retrieval.arxiv_retriever | ArXiv searching: 'What are limitations of using transformer-based LLMs in real-world scenarios'
+2026-03-28 23:49:24 | INFO     | app.retrieval.semantic_scholar_retriever | Semantic Scholar searching: 'What are limitations of using transformer-based LLMs in real-world scenarios'
+2026-03-28 23:49:25 | INFO     | app.retrieval.pubmed_retriever | PubMed skipped — query not medical: 'What are limitations of using transformer-based LLMs in real-world scenarios'
+2026-03-28 23:49:25 | INFO     | app.retrieval.hackernews_retriever | HackerNews searching: 'What are limitations of using transformer-based LLMs in real-world scenarios'
+2026-03-28 23:49:25 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:49:25 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:49:25 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:49:25 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:49:25 | ERROR    | app.retrieval.tavily_retriever | Tavily API key invalid — check your .env file
+2026-03-28 23:49:25 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-03-28 23:49:25 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-03-28 23:49:25 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-03-28 23:49:25 | INFO     | app.retrieval.hackernews_retriever | HackerNews returned 0 results
+2026-03-28 23:49:25 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:49:25 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:49:25 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:49:25 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:49:25 | WARNING  | app.retrieval.semantic_scholar_retriever | Semantic Scholar rate limited — skipping
+2026-03-28 23:49:28 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Generative pre-trained transformer'
+2026-03-28 23:49:29 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-03-28 23:49:31 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-03-28 23:49:33 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-03-28 23:49:34 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Transformer (deep learning)'
+2026-03-28 23:49:35 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Natural language processing'
+2026-03-28 23:49:36 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 2 relevant results
+2026-03-28 23:49:36 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'GPT-4'
+2026-03-28 23:49:37 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Large language model'
+2026-03-28 23:49:37 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=What+are+limitations+of+using+transformer-based+LLMs+in+real-world+scenarios&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-28 23:49:37 | ERROR    | app.retrieval.arxiv_retriever | ArXiv failed: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=What+are+advantages+of+using+transformer+models+in+NLP+applications&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-03-28 23:49:38 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Huawei PanGu'
+2026-03-28 23:49:39 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Hallucination (artificial intelligence)'
+2026-03-28 23:49:40 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Recommender system'
+2026-03-28 23:49:40 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-03-28 23:49:41 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'Reinforcement learning from human feedback'
+2026-03-28 23:49:41 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-03-28 23:49:42 | DEBUG    | app.retrieval.wikipedia_retriever | Wikipedia filtered: 'ChatGPT'
+2026-03-28 23:49:42 | INFO     | app.retrieval.wikipedia_retriever | Wikipedia returned 0 relevant results
+2026-03-28 23:49:42 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=0 | unique=0 | returned=0
+2026-03-28 23:49:42 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=0 | unique=0 | returned=0
+2026-03-28 23:49:44 | WARNING  | app.retrieval.hybrid_retriever | arxiv timed out after 20s — skipped
+2026-03-28 23:49:44 | WARNING  | app.retrieval.hybrid_retriever | arxiv timed out after 20s — skipped
+2026-03-28 23:49:44 | WARNING  | app.retrieval.hybrid_retriever | arxiv timed out after 20s — skipped
+2026-03-28 23:49:44 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=0 | unique=0 | returned=0
+2026-03-28 23:49:44 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=2 | unique=2 | returned=2
+2026-03-28 23:49:44 | INFO     | app.retrieval.hybrid_retriever | HybridRetriever done | total=2 | unique=2 | returned=2
+2026-03-28 23:50:43 | INFO     | main | Server shutting down.
